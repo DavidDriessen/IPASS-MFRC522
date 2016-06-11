@@ -1,6 +1,10 @@
 //
 // Created by david on 6/8/2016.
 //
+//          Copyright David Driessen 2016 - 2020.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
 
 #ifndef TEST_NFCCLASS_H
 #define TEST_NFCCLASS_H
