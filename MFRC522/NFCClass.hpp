@@ -17,6 +17,11 @@
 MFRC522 mfrc522;
 #endif
 
+/**
+ * The NFCClass class is an simplified version of the implementation of a nfc reader.
+ *
+ * /author David Driessen
+ */
 class NFCClass {
     void SerialPrint(const char *data, int hex = 10) {
         if (hex == 16) {
@@ -49,17 +54,33 @@ public:
     };
 
 #ifdef _SPI_H_INCLUDED
-
+    /**
+   * Default constructor
+   */
     NFCClass() : nfc(mfrc522) { }
 
 #endif
 
+    /**
+     * Constructor
+     * \param nfcc An implementation of the nfcController class
+     */
     NFCClass(nfcController &nfcc) : nfc(nfcc) { }
 
-    void begin(int cs = 0) {
-        nfc.begin();
+    /**
+     * Set things up.
+     * \param chipSelect The number of the chipSelect pin where the chip is connected.
+     */
+    void begin(int chipSelect = 0) {
+        nfc.begin(chipSelect);
     }
 
+    /**
+     * Read an block of an RFID card.
+     * \param block The number of the block that you want too read.
+     * \param data An array with min size 16, to put the data in.
+     * \param loop Wait for the data. Default = true.
+     */
     Status ReadBlock(int block, byte *data, bool loop = true) {
         for (int j = 0; j < keysLen; ++j) {
             if (!prepare(loop)) {
@@ -81,6 +102,12 @@ public:
         return AUTH;
     }
 
+    /**
+     * Read an sector of an RFID card.
+     * \param sector The number of the sector that you want too read.
+     * \param data An array (with min size 4) of arrays (with min size 16), to put the data in.
+     * \param loop Wait for the data. Default = true.
+     */
     Status ReadSector(int sector, byte **data, bool loop = true) {
         sector *= 4;
         for (int j = 0; j < keysLen; ++j) {
@@ -103,6 +130,12 @@ public:
         return AUTH;
     }
 
+    /**
+     * Read all data of an RFID card.
+     * \param sector The number of the sector that you want too read.
+     * \param data An array (with min size 16) of arrays (with min size 4) of arrays (with min size 16), to put the data in.
+     * \param loop Wait for the data. Default = true.
+     */
     Status ReadAll(byte ***data, bool loop = true, int key = 0) {
         for (int sector = 0; sector < 16; ++sector) {
             Status result = ReadSector(sector, data[sector], loop);
@@ -112,6 +145,12 @@ public:
         }
     }
 
+    /**
+     * Write data to an block of an RFID card.
+     * \param block The number of the block that you want too read.
+     * \param data An array with data to write to the block. Max site 16.
+     * \param loop Wait for the data. Default = true.
+     */
     Status WriteBlock(int block, byte *data, bool loop = true) {
         for (int j = 0; j < keysLen; ++j) {
             if (!prepare(loop)) {
@@ -133,10 +172,17 @@ public:
         return AUTH;
     }
 
+    /**
+     * Get the version of the chips firmware.
+     * \return The firmware version as byte.
+     */
     byte getFirmwareVersion() {
         return nfc.getFirmwareVersion();
     }
 
+    /**
+     * Print the version of the chips firmware.
+     */
     void printFirmwareVersion() {
         byte v = nfc.getFirmwareVersion();
         SerialPrint("Firmware Version: 0x");
@@ -165,19 +211,25 @@ public:
         }
     }
 
-    void addKey(byte *key, int len) {
-        if (len > 16) {
-            return;
-        }
-        for (int i = 0; i < len; ++i) {
+    /**
+     * Adds an 6 bytes long key to the key list.
+     * \param key The 6 bytes long array key to add to the key list.
+     */
+    void addKey(byte *key) {
+        for (int i = 0; i < 16; ++i) {
             keys[keysLen][i] = key[i];
         }
-        for (int j = len; j < 16; ++j) {
+        for (int j = 16; j < 16; ++j) {
             keys[keysLen][j] = 0x00;
         }
         keysLen++;
     }
 
+    /**
+     * Get the key from the key list.
+     * \param pos The position of the key in de list.
+     * \return The 6 bytes long array key from the key list.
+     */
     byte *getKey(int pos) {
         if (pos >= keysLen) {
             return nullptr;
@@ -185,11 +237,19 @@ public:
         return keys[pos];
     }
 
+    /**
+     * Get the number of keys in the key list.
+     * \return Number of keys in the key list.
+     */
     int getKeyCount() {
         return keysLen;
     }
 
-    byte *getId(){
+    /**
+     * Get the id of the last scanned card.
+     * \return An 4 bytes id.
+     */
+    byte *getId() {
         return uid;
     }
 
