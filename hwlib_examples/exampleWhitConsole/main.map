@@ -1,0 +1,642 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                              main.o (__aeabi_uldivmod)
+c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+                              c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
+                              c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                              main.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+__dso_handle        0x4               bmptk_cortex.o
+
+Discarded input sections
+
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text._ZN5hwlib19_pin_in_dummy_class3getEv
+                0x00000000        0x4 main.o
+ .text._ZN5hwlib20_pin_out_dummy_class3setEb
+                0x00000000        0x2 main.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class3setEb
+                0x00000000        0x2 main.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class3getEv
+                0x00000000        0x4 main.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class19direction_set_inputEv
+                0x00000000        0x2 main.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class20direction_set_outputEv
+                0x00000000        0x2 main.o
+ .text._ZN5hwlib19_pin_oc_dummy_class3setEb
+                0x00000000        0x2 main.o
+ .text._ZN5hwlib19_pin_oc_dummy_class3getEv
+                0x00000000        0x4 main.o
+ .text._ZN5hwlib6window5writeENS_8locationENS_5colorE
+                0x00000000       0x3e main.o
+ .text._ZN5hwlib4line4drawERNS_6windowE
+                0x00000000       0xa4 main.o
+ .text._ZN5hwlib6circle4drawERNS_6windowE
+                0x00000000      0x2ec main.o
+ .text._ZN5hwlib4randEv
+                0x00000000       0x20 main.o
+ .text._ZN5hwlib15random_in_rangeEjj
+                0x00000000       0x1a main.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x00000000       0x1c main.o
+ .text._ZN3due11ad_seq_infoEi
+                0x00000000       0x20 main.o
+ .text._ZN5hwlib7wait_nsEi
+                0x00000000       0x10 main.o
+ .text._ZN5hwlib5blinkERNS_7pin_outEi
+                0x00000000       0x28 main.o
+ .text._ZN5hwlib4kittERNS_11port_in_outEi
+                0x00000000       0x54 main.o
+ .text._ZN5hwlib4kittERNS_8port_outEi
+                0x00000000       0x4e main.o
+ .text._ZN5hwlib4kittERNS_7port_ocEi
+                0x00000000       0x4e main.o
+ .text._ZN5hwlib21graphics_random_linesERNS_6windowE
+                0x00000000       0xe8 main.o
+ .text._ZN5hwlib23graphics_random_circlesERNS_6windowE
+                0x00000000       0x8c main.o
+ .text._ZN5hwlib19cin_using_uart_getc4getcEv
+                0x00000000        0x8 main.o
+ .text._Z5delayi
+                0x00000000        0x8 main.o
+ .text._ZN14ArduinoConsole12getParameterEi
+                0x00000000       0x18 main.o
+ .text._ZN14ArduinoConsole15checkParametersEPci
+                0x00000000       0x64 main.o
+ .text._ZN14ArduinoConsole10charToByteEPcRiPh
+                0x00000000       0xea main.o
+ .text._ZN14ArduinoConsole18getParameterAsByteEPhi
+                0x00000000       0x2e main.o
+ .text._ZN14ArduinoConsole10ReadAsByteEPhRi
+                0x00000000       0x2e main.o
+ .text._ZN14ArduinoConsole9charToIntEPc
+                0x00000000       0x4e main.o
+ .text._ZN14ArduinoConsole17getParameterAsIntEi
+                0x00000000       0x1c main.o
+ .text._ZN14ArduinoConsole9ReadAsIntEv
+                0x00000000       0x28 main.o
+ .text._Z10printBytesPKcPhhb
+                0x00000000       0x8c main.o
+ .rodata._ZTVN5hwlib19_pin_in_dummy_classE
+                0x00000000        0xc main.o
+ .rodata._ZTVN5hwlib20_pin_out_dummy_classE
+                0x00000000        0xc main.o
+ .rodata._ZTVN5hwlib23_pin_in_out_dummy_classE
+                0x00000000       0x18 main.o
+ .rodata._ZTVN5hwlib19_pin_oc_dummy_classE
+                0x00000000       0x10 main.o
+ .rodata._ZTVN5hwlib19cin_using_uart_getcE
+                0x00000000        0xc main.o
+ .rodata._ZTVN5hwlib4lineE
+                0x00000000        0xc main.o
+ .rodata._ZTVN5hwlib6circleE
+                0x00000000        0xc main.o
+ .data._ZN5hwlib12pin_in_dummyE
+                0x00000000        0x4 main.o
+ .data._ZN5hwlib16pin_in_out_dummyE
+                0x00000000        0x4 main.o
+ .data._ZN5hwlib3cinE
+                0x00000000        0x4 main.o
+ .bss._ZZN5hwlib4randEvE1n
+                0x00000000        0x4 main.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x00000000        0xc main.o
+ .data._ZN5hwlib12pin_oc_dummyE
+                0x00000000        0x4 main.o
+ .rodata._ZZN3due11ad_seq_infoEiE12ad_seq_array
+                0x00000000       0x70 main.o
+ .data._ZN5hwlib13pin_out_dummyE
+                0x00000000        0x4 main.o
+ .text          0x00000000        0x0 bmptk_cortex.o
+ .data          0x00000000        0x0 bmptk_cortex.o
+ .bss           0x00000000        0x0 bmptk_cortex.o
+ .text.__aeabi_idiv0
+                0x00000000        0x4 bmptk_cortex.o
+ .text.__cxa_pure_virtual
+                0x00000000        0x2 bmptk_cortex.o
+ COMMON         0x00000000        0x4 bmptk_cortex.o
+ .text          0x00000000        0x0 bmptk_heap_none.o
+ .data          0x00000000        0x0 bmptk_heap_none.o
+ .bss           0x00000000        0x0 bmptk_heap_none.o
+ .text.malloc   0x00000000        0xa bmptk_heap_none.o
+ .text.free     0x00000000        0x4 bmptk_heap_none.o
+ .text          0x00000000        0x0 bmptk_fixed_size_stack.o
+ .data          0x00000000        0x0 bmptk_fixed_size_stack.o
+ .bss           0x00000000        0x0 bmptk_fixed_size_stack.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00080000         xr
+ram              0x20000000         0x00018000         xrw
+nul              0x20000000         0x00000000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a
+LOAD main.o
+LOAD bmptk_cortex.o
+LOAD bmptk_heap_none.o
+LOAD bmptk_fixed_size_stack.o
+LOAD c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libstdc++.a
+LOAD c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libm.a
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+                0x00000000                __rom_start = ORIGIN (rom)
+                0x00080000                __rom_size = LENGTH (rom)
+                0x00080000                __rom_end = (__rom_start + __rom_size)
+                0x20000000                __ram_start = ORIGIN (ram)
+                0x00018000                __ram_size = LENGTH (ram)
+                0x20018000                __ram_end = (__ram_start + __ram_size)
+                [!provide]                PROVIDE (__rom_start, __rom_start)
+                [!provide]                PROVIDE (__rom_size, __rom_size)
+                [!provide]                PROVIDE (__rom_end, __rom_end)
+                [!provide]                PROVIDE (__ram_start, __ram_start)
+                [!provide]                PROVIDE (__ram_size, __ram_size)
+                [!provide]                PROVIDE (__ram_end, __ram_end)
+
+.text           0x00000000     0x15b8
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                __text_start = .
+                [!provide]                PROVIDE (__text_start, __text_start)
+                0x00000000                . = ALIGN (0x4)
+ *(.vectors)
+ .vectors       0x00000000       0x20 bmptk_cortex.o
+                0x00000000                __vectors
+                0x00000020                . = ALIGN (0x4)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text._ZN5hwlib7ostream5flushEv
+                0x00000020        0x2 main.o
+                0x00000020                hwlib::ostream::flush()
+ .text._ZN3due6pin_in3getEv
+                0x00000022       0x10 main.o
+                0x00000022                due::pin_in::get()
+ .text._ZN3due7pin_out3setEb
+                0x00000032        0xe main.o
+                0x00000032                due::pin_out::set(bool)
+ .text._ZN3due10pin_in_out19direction_set_inputEv
+                0x00000040        0x8 main.o
+                0x00000040                due::pin_in_out::direction_set_input()
+ .text._ZN3due10pin_in_out3getEv
+                0x00000048       0x10 main.o
+                0x00000048                due::pin_in_out::get()
+ .text._ZN3due10pin_in_out20direction_set_outputEv
+                0x00000058        0x8 main.o
+                0x00000058                due::pin_in_out::direction_set_output()
+ .text._ZN3due10pin_in_out3setEb
+                0x00000060        0xe main.o
+                0x00000060                due::pin_in_out::set(bool)
+ .text._ZN5hwlib7ostreamlsEc
+                0x0000006e        0xe main.o
+                0x0000006e                hwlib::ostream::operator<<(char)
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x0000007c       0x68 main.o
+                0x0000007c                hwlib::operator<<(hwlib::ostream&, char const*)
+ .text._ZN5hwliblsERNS_7ostreamEi
+                0x000000e4       0xd4 main.o
+                0x000000e4                hwlib::operator<<(hwlib::ostream&, int)
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x000001b8       0x20 main.o
+                0x000001b8                due::pin_info(due::pins)
+ .text._ZN3due14port_registersEi
+                0x000001d8       0x48 main.o
+                0x000001d8                due::port_registers(int)
+ .text._ZN3due7pin_outC2ENS_4pinsE
+                0x00000220       0x34 main.o
+                0x00000220                due::pin_out::pin_out(due::pins)
+                0x00000220                due::pin_out::pin_out(due::pins)
+ .text._ZN3due6now_usEv
+                0x00000254       0x78 main.o
+                0x00000254                due::now_us()
+ *fill*         0x000002cc        0x4 
+ .text._ZN5hwlib7wait_usEi
+                0x000002d0       0x28 main.o
+                0x000002d0                hwlib::wait_us(int)
+ .text._ZN5hwlib24uart_putc_bit_banged_pinEcRNS_7pin_outE
+                0x000002f8       0x5c main.o
+                0x000002f8                hwlib::uart_putc_bit_banged_pin(char, hwlib::pin_out&)
+ .text._ZN5hwlib33spi_bus_bit_banged_sclk_mosi_miso14write_and_readERNS_7pin_outEiPKhPh
+                0x00000354       0xa2 main.o
+                0x00000354                hwlib::spi_bus_bit_banged_sclk_mosi_miso::write_and_read(hwlib::pin_out&, int, unsigned char const*, unsigned char*)
+ .text._ZN5hwlib7wait_msEi
+                0x000003f6       0x16 main.o
+                0x000003f6                hwlib::wait_ms(int)
+ .text._ZN5hwlib9uart_putcEc
+                0x0000040c       0x3c main.o
+                0x0000040c                hwlib::uart_putc(char)
+ .text._ZN5hwlib20cout_using_uart_putc4putcEc
+                0x00000448        0xa main.o
+                0x00000448                hwlib::cout_using_uart_putc::putc(char)
+ .text._ZN5hwlib6now_usEv
+                0x00000452        0x8 main.o
+                0x00000452                hwlib::now_us()
+ .text._ZN5hwlib24uart_getc_bit_banged_pinERNS_6pin_inE
+                0x0000045a       0x6c main.o
+                0x0000045a                hwlib::uart_getc_bit_banged_pin(hwlib::pin_in&)
+ *fill*         0x000004c6        0x2 
+ .text._ZN5hwlib9uart_getcEv
+                0x000004c8       0x38 main.o
+                0x000004c8                hwlib::uart_getc()
+ .text._ZN13SPIsetupClassC2Ev
+                0x00000500       0xb4 main.o
+                0x00000500                SPIsetupClass::SPIsetupClass()
+                0x00000500                SPIsetupClass::SPIsetupClass()
+ .text._ZN13SPIsetupClass14write_and_readEiiPhS0_
+                0x000005b4       0x22 main.o
+                0x000005b4                SPIsetupClass::write_and_read(int, int, unsigned char*, unsigned char*)
+ .text._ZN7MFRC5227ReadRegEh
+                0x000005d6       0x34 main.o
+                0x000005d6                MFRC522::ReadReg(unsigned char)
+ .text._ZN7MFRC52218getFirmwareVersionEv
+                0x0000060a        0xa main.o
+                0x0000060a                MFRC522::getFirmwareVersion()
+ .text._ZN7MFRC5228WriteRegEhh
+                0x00000614       0x2c main.o
+                0x00000614                MFRC522::WriteReg(unsigned char, unsigned char)
+ .text._ZN7MFRC5228WriteRegEhhPh
+                0x00000640       0x52 main.o
+                0x00000640                MFRC522::WriteReg(unsigned char, unsigned char, unsigned char*)
+ .text._ZN7MFRC52212ClearBitMaskEhh
+                0x00000692       0x1c main.o
+                0x00000692                MFRC522::ClearBitMask(unsigned char, unsigned char)
+ .text._ZN7MFRC52210SetBitMaskEhh
+                0x000006ae       0x1c main.o
+                0x000006ae                MFRC522::SetBitMask(unsigned char, unsigned char)
+ .text._ZN7MFRC5225beginEi
+                0x000006ca       0x9c main.o
+                0x000006ca                MFRC522::begin(int)
+ .text._ZN7MFRC52213calculate_crcEPhiS0_
+                0x00000766       0x76 main.o
+                0x00000766                MFRC522::calculate_crc(unsigned char*, int, unsigned char*)
+ .text._ZN7MFRC52214DeauthenticateEv
+                0x000007dc       0x9a main.o
+                0x000007dc                MFRC522::Deauthenticate()
+ .text._ZN7MFRC52211CommunicateEhPhhS0_S0_S0_b
+                0x00000876      0x190 main.o
+                0x00000876                MFRC522::Communicate(unsigned char, unsigned char*, unsigned char, unsigned char*, unsigned char*, unsigned char*, bool)
+ .text._ZN7MFRC52210WriteBlockEhPhh
+                0x00000a06       0xe8 main.o
+                0x00000a06                MFRC522::WriteBlock(unsigned char, unsigned char*, unsigned char)
+ .text._ZN7MFRC52212AuthenticateEhhPhS0_
+                0x00000aee       0x4c main.o
+                0x00000aee                MFRC522::Authenticate(unsigned char, unsigned char, unsigned char*, unsigned char*)
+ .text._ZN7MFRC5229GetCardIdEPh
+                0x00000b3a       0x5a main.o
+                0x00000b3a                MFRC522::GetCardId(unsigned char*)
+ .text._ZN7MFRC52210DetectCardEv
+                0x00000b94       0x5a main.o
+                0x00000b94                MFRC522::DetectCard()
+ .text._ZN7MFRC52210SelectCardEPh
+                0x00000bee       0xba main.o
+                0x00000bee                MFRC522::SelectCard(unsigned char*)
+ .text._ZN7MFRC5229ReadBlockEhPhRh
+                0x00000ca8       0x7a main.o
+                0x00000ca8                MFRC522::ReadBlock(unsigned char, unsigned char*, unsigned char&)
+ *fill*         0x00000d22        0x2 
+ .text._ZN14ArduinoConsole16printCommandListEPS_
+                0x00000d24       0x3c main.o
+                0x00000d24                ArduinoConsole::printCommandList(ArduinoConsole*)
+ .text._Z13printCommandsP14ArduinoConsole
+                0x00000d60        0x6 main.o
+                0x00000d60                printCommands(ArduinoConsole*)
+ .text._ZN14ArduinoConsole10addCommandEPKcPFvPS_E
+                0x00000d66       0x2a main.o
+                0x00000d66                ArduinoConsole::addCommand(char const*, void (*)(ArduinoConsole*))
+ .text._ZN14ArduinoConsoleC2Ev
+                0x00000d90       0x58 main.o
+                0x00000d90                ArduinoConsole::ArduinoConsole()
+                0x00000d90                ArduinoConsole::ArduinoConsole()
+ .text._ZN14ArduinoConsole4ReadEPcRi
+                0x00000de8       0x70 main.o
+                0x00000de8                ArduinoConsole::Read(char*, int&)
+ .text._ZN14ArduinoConsole3runEv
+                0x00000e58      0x184 main.o
+                0x00000e58                ArduinoConsole::run()
+ .text.startup.main
+                0x00000fdc       0x6c main.o
+                0x00000fdc                main
+ .text.__startup
+                0x00001048       0x48 bmptk_cortex.o
+                0x00001048                __startup
+ .text          0x00001090       0x30 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                0x00001090                __aeabi_uldivmod
+ .text          0x000010c0      0x2ec c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+                0x000010c0                __udivmoddi4
+ .text          0x000013ac        0x4 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x000013ac                __aeabi_ldiv0
+ .text.memset   0x000013b0       0x9c c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x000013b0                memset
+                0x0000144c                . = ALIGN (0x4)
+ *(.glue_7t .glue_7)
+ .glue_7        0x0000144c        0x0 linker stubs
+ .glue_7t       0x0000144c        0x0 linker stubs
+                0x0000144c                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._ZTVN5hwlib20cout_using_uart_putcE
+                0x0000144c       0x10 main.o
+                0x0000144c                vtable for hwlib::cout_using_uart_putc
+ .rodata._ZTVN5hwlib33spi_bus_bit_banged_sclk_mosi_misoE
+                0x0000145c        0xc main.o
+                0x0000145c                vtable for hwlib::spi_bus_bit_banged_sclk_mosi_miso
+ .rodata._ZTVN3due6pin_inE
+                0x00001468        0xc main.o
+                0x00001468                vtable for due::pin_in
+ .rodata._ZTVN3due7pin_outE
+                0x00001474        0xc main.o
+                0x00001474                vtable for due::pin_out
+ .rodata._ZTVN3due10pin_in_outE
+                0x00001480       0x18 main.o
+                0x00001480                vtable for due::pin_in_out
+ .rodata._ZTV7MFRC522
+                0x00001498       0x2c main.o
+                0x00001498                vtable for MFRC522
+ .rodata.str1.1
+                0x000014c4       0x50 main.o
+                                 0x52 (size before relaxing)
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x00001514       0xa4 main.o
+                0x000015b8                . = ALIGN (0x4)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000015b8                . = ALIGN (0x4)
+ *(.gcc_except_table)
+                0x000015b8                . = ALIGN (0x4)
+ *(.eh_frame_hdr)
+                0x000015b8                . = ALIGN (0x4)
+ *(.eh_frame)
+                0x000015b8                . = ALIGN (0x4)
+                0x000015b8                __text_end = .
+                [!provide]                PROVIDE (__text_end, __text_end)
+
+.vfp11_veneer   0x000015b8        0x0
+ .vfp11_veneer  0x000015b8        0x0 linker stubs
+
+.v4_bx          0x000015b8        0x0
+ .v4_bx         0x000015b8        0x0 linker stubs
+
+.iplt           0x000015b8        0x0
+ .iplt          0x000015b8        0x0 main.o
+
+.IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
+ *(.init)
+ *(.preinit_array)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x000015b8                . = ALIGN (0x4)
+                0x000015b8                __exidx_start = .
+                [!provide]                PROVIDE (__exidx_start, __exidx_start)
+
+.ARM.exidx      0x000015b8        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x000015b8        0x8 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+
+.rel.dyn        0x000015c0        0x0
+ .rel.iplt      0x000015c0        0x0 main.o
+                0x000015c0                . = ALIGN (0x4)
+                0x000015c0                __exidx_end = .
+                [!provide]                PROVIDE (__exidx_end, __exidx_end)
+
+.bss            0x20000000    0x12034
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                __stack_start = .
+                [!provide]                PROVIDE (__stack_start, __stack_start)
+                0x20000000                . = ALIGN (0x4)
+ *(.bmptk_stack)
+ .bmptk_stack   0x20000000    0x12000 bmptk_fixed_size_stack.o
+                0x20000000                bmptk_stack
+                0x20012000                . = ALIGN (0x8)
+                0x20012000                __main_stack_end = .
+                [!provide]                PROVIDE (__main_stack_end, __main_stack_end)
+                0x20012000                . = ALIGN (0x4)
+                0x20012000                __stack_end = .
+                [!provide]                PROVIDE (__stack_end, __stack_end)
+                0x20012000                . = ALIGN (0x4)
+                0x20012000                __bss_start = .
+                [!provide]                PROVIDE (__bss_start, __bss_start)
+                0x20012000                . = ALIGN (0x4)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._ZGVZN5hwlib9uart_putcEcE3pin
+                0x20012000        0x4 main.o
+ .bss._ZZN5hwlib9uart_getcEvE3pin
+                0x20012004        0xc main.o
+ .bss._ZZN5hwlib9uart_putcEcE3pin
+                0x20012010        0xc main.o
+ .bss._ZZN3due6now_usEvE8last_low
+                0x2001201c        0x4 main.o
+ .bss._ZGVZN5hwlib9uart_getcEvE3pin
+                0x20012020        0x4 main.o
+ *fill*         0x20012024        0x4 
+ .bss._ZZN3due6now_usEvE4high
+                0x20012028        0x8 main.o
+ .bss._ZZN3due6now_usEvE9init_done
+                0x20012030        0x1 main.o
+                0x20012034                . = ALIGN (0x4)
+ *fill*         0x20012031        0x3 
+ *(COMMON)
+                0x20012034                . = ALIGN (0x4)
+                0x20012034                __bss_end = .
+                [!provide]                PROVIDE (__bss_end, __bss_end)
+
+.data           0x20012034       0x14 load address 0x000015c0
+                0x20012034                . = ALIGN (0x4)
+                0x000015c0                __data_init_start = LOADADDR (.data)
+                [!provide]                PROVIDE (__data_init_start, __data_init_start)
+                0x20012034                __data_start = .
+                [!provide]                PROVIDE (__data_start, __data_start)
+                0x20012034                . = ALIGN (0x4)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data._ZN5hwlib4coutE
+                0x20012034       0x14 main.o
+                0x20012034                hwlib::cout
+                0x20012048                . = ALIGN (0x4)
+                0x20012048                __data_end = .
+                [!provide]                PROVIDE (__data_end, __data_end)
+                0x000015c0                __data_init_end = LOADADDR (.data)
+                [!provide]                PROVIDE (__data_init_end, __data_init_end)
+                0x00000014                PROVIDE (__data_size, (__data_end - __data_start))
+                0x00000014                PROVIDE (__data_init_size, __data_size)
+                [!provide]                PROVIDE (__data_init_end, (__data_init_start + __data_init_size))
+
+.igot.plt       0x20012048        0x0 load address 0x000015d4
+ .igot.plt      0x20012048        0x0 main.o
+                0x20012048                . = ALIGN (0x4)
+                0x20012048                __heap_start = .
+                [!provide]                PROVIDE (__heap_start, __heap_start)
+                0x20012048                . = ALIGN (0x4)
+                0x20018000                __heap_end = __ram_end
+                [!provide]                PROVIDE (__heap_end, __heap_end)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame    0x00000000       0x98
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x2c c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000002c       0x38 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000064       0x34 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e main.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f bmptk_cortex.o
+ .comment       0x0000006e       0x6f bmptk_heap_none.o
+ .comment       0x0000006e       0x6f bmptk_fixed_size_stack.o
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x33
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x33 main.o
+ .ARM.attributes
+                0x00000033       0x33 bmptk_cortex.o
+ .ARM.attributes
+                0x00000066       0x33 bmptk_heap_none.o
+ .ARM.attributes
+                0x00000099       0x33 bmptk_fixed_size_stack.o
+ .ARM.attributes
+                0x000000cc       0x1d c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x000000e9       0x2d c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000116       0x1d c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000133       0x2d c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+/DISCARD/
+ *(.note.GNU-stack)
+                [!provide]                PROVIDE (__text_size, (__text_end - __text_start))
+                [!provide]                PROVIDE (__exidx_size, (__exidx_end - __exidx_start))
+                [!provide]                PROVIDE (__bss_size, (__bss_end - __bss_start))
+                [!provide]                PROVIDE (__stack_size, (__stack_end - __stack_start))
+                [!provide]                PROVIDE (__heap_size, (__heap_end - __heap_start))
+OUTPUT(main.elf elf32-littlearm)

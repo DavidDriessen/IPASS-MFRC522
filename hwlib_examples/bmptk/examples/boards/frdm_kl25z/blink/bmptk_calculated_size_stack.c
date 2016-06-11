@@ -1,0 +1,1 @@
+unsigned char bmptk_stack[ 24 ] __attribute__ ((section(".bmptk_stack")));

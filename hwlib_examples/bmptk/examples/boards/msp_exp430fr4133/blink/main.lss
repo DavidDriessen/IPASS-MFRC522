@@ -1,0 +1,283 @@
+
+main.elf:     file format elf32-msp430
+
+
+Disassembly of section .text:
+
+0000c410 <__start>:
+    c410:	31 40 00 28 	mov	#10240,	r1	;#0x2800
+
+0000c414 <.Loc.39.1>:
+    c414:	b2 40 80 5a 	mov	#23168,	&0x015c	;#0x5a80
+    c418:	5c 01 
+
+0000c41a <__crt0_init_bss>:
+    c41a:	3c 40 02 20 	mov	#8194,	r12	;#0x2002
+
+0000c41e <.Loc.53.1>:
+    c41e:	0d 43       	clr	r13		;
+
+0000c420 <.Loc.54.1>:
+    c420:	3e 40 12 00 	mov	#18,	r14	;#0x0012
+
+0000c424 <.Loc.58.1>:
+    c424:	b0 12 76 c5 	call	#50550		;#0xc576
+
+0000c428 <__crt0_call_init_then_main>:
+    c428:	b0 12 aa c5 	call	#50602		;#0xc5aa
+
+0000c42c <.Loc.96.1>:
+    c42c:	0c 43       	clr	r12		;
+
+0000c42e <.Loc.97.1>:
+    c42e:	b0 12 36 c5 	call	#50486		;#0xc536
+
+0000c432 <_msp430_run_init_array>:
+    c432:	34 40 04 c4 	mov	#50180,	r4	;#0xc404
+
+0000c436 <.Loc.117.1>:
+    c436:	35 40 04 c4 	mov	#50180,	r5	;#0xc404
+
+0000c43a <.Loc.118.1>:
+    c43a:	26 43       	mov	#2,	r6	;r3 As==10
+
+0000c43c <.Loc.119.1>:
+    c43c:	30 40 5e c4 	br	#0xc45e		;
+
+0000c440 <_msp430_run_preinit_array>:
+    c440:	34 40 04 c4 	mov	#50180,	r4	;#0xc404
+
+0000c444 <.Loc.125.1>:
+    c444:	35 40 04 c4 	mov	#50180,	r5	;#0xc404
+
+0000c448 <.Loc.126.1>:
+    c448:	26 43       	mov	#2,	r6	;r3 As==10
+
+0000c44a <.Loc.127.1>:
+    c44a:	30 40 5e c4 	br	#0xc45e		;
+
+0000c44e <_msp430_run_fini_array>:
+    c44e:	34 40 04 c4 	mov	#50180,	r4	;#0xc404
+
+0000c452 <.Loc.133.1>:
+    c452:	35 40 04 c4 	mov	#50180,	r5	;#0xc404
+
+0000c456 <.Loc.134.1>:
+    c456:	36 40 fe ff 	mov	#65534,	r6	;#0xfffe
+
+0000c45a <.Loc.135.1>:
+    c45a:	30 40 5e c4 	br	#0xc45e		;
+
+0000c45e <_msp430_run_array>:
+    c45e:	05 94       	cmp	r4,	r5	;
+
+0000c460 <.Loc.139.1>:
+    c460:	05 24       	jz	$+12     	;abs 0xc46c
+
+0000c462 <.Loc.140.1>:
+    c462:	27 44       	mov	@r4,	r7	;
+
+0000c464 <.Loc.141.1>:
+    c464:	04 56       	add	r6,	r4	;
+
+0000c466 <.Loc.142.1>:
+    c466:	a7 12       	call	@r7		;
+
+0000c468 <.Loc.143.1>:
+    c468:	10 40 f4 ff 	br	0xfff4		;PC rel. 0xc45e
+
+0000c46c <_msp430_run_done>:
+    c46c:	30 41       	ret			
+
+0000c46e <L0>:
+    c46e:	3c 40 c6 c5 	mov	#50630,	r12	;#0xc5c6
+    c472:	3c 80 c5 c5 	sub	#50629,	r12	;#0xc5c5
+    c476:	2d 43       	mov	#2,	r13	;r3 As==10
+    c478:	0d 9c       	cmp	r12,	r13	;
+    c47a:	07 2c       	jc	$+16     	;abs 0xc48a
+    c47c:	3d 40 00 00 	mov	#0,	r13	;
+    c480:	0d 93       	cmp	#0,	r13	;r3 As==00
+    c482:	03 24       	jz	$+8      	;abs 0xc48a
+    c484:	3c 40 c6 c5 	mov	#50630,	r12	;#0xc5c6
+    c488:	8d 12       	call	r13		;
+
+0000c48a <.L1>:
+    c48a:	30 41       	ret			
+
+0000c48c <register_tm_clones>:
+    c48c:	3d 40 c6 c5 	mov	#50630,	r13	;#0xc5c6
+    c490:	3d 80 c6 c5 	sub	#50630,	r13	;#0xc5c6
+    c494:	0d 11       	rra	r13		;
+    c496:	0c 4d       	mov	r13,	r12	;
+    c498:	5c 03       	rrum	#1,	r12	;
+    c49a:	4d 18 0c 11 	rpt #14 { rrax.w	r12		;
+    c49e:	0d 5c       	add	r12,	r13	;
+    c4a0:	0d 11       	rra	r13		;
+    c4a2:	0d 93       	cmp	#0,	r13	;r3 As==00
+    c4a4:	07 24       	jz	$+16     	;abs 0xc4b4
+    c4a6:	3e 40 00 00 	mov	#0,	r14	;
+    c4aa:	0e 93       	cmp	#0,	r14	;r3 As==00
+    c4ac:	03 24       	jz	$+8      	;abs 0xc4b4
+    c4ae:	3c 40 c6 c5 	mov	#50630,	r12	;#0xc5c6
+    c4b2:	8e 12       	call	r14		;
+
+0000c4b4 <.L7>:
+    c4b4:	30 41       	ret			
+
+0000c4b6 <__do_global_dtors_aux>:
+    c4b6:	0a 15       	pushm	#1,	r10	;16-bit words
+    c4b8:	c2 93 02 20 	cmp.b	#0,	&0x2002	;r3 As==00
+    c4bc:	20 20       	jnz	$+66     	;abs 0xc4fe
+    c4be:	1c 42 04 20 	mov	&0x2004,r12	;0x2004
+    c4c2:	3a 40 0e c4 	mov	#50190,	r10	;#0xc40e
+    c4c6:	3a 80 0c c4 	sub	#50188,	r10	;#0xc40c
+    c4ca:	0a 11       	rra	r10		;
+    c4cc:	3a 53       	add	#-1,	r10	;r3 As==11
+    c4ce:	0c 9a       	cmp	r10,	r12	;
+    c4d0:	0b 2c       	jc	$+24     	;abs 0xc4e8
+
+0000c4d2 <.L22>:
+    c4d2:	1c 53       	inc	r12		;
+    c4d4:	82 4c 04 20 	mov	r12,	&0x2004	;
+    c4d8:	0c 5c       	rla	r12		;
+    c4da:	1c 4c 0c c4 	mov	-15348(r12),r12	;0xffffc40c
+    c4de:	8c 12       	call	r12		;
+    c4e0:	1c 42 04 20 	mov	&0x2004,r12	;0x2004
+    c4e4:	0c 9a       	cmp	r10,	r12	;
+    c4e6:	f5 2b       	jnc	$-20     	;abs 0xc4d2
+
+0000c4e8 <.L21>:
+    c4e8:	b0 12 6e c4 	call	#50286		;#0xc46e
+    c4ec:	3d 40 00 00 	mov	#0,	r13	;
+    c4f0:	0d 93       	cmp	#0,	r13	;r3 As==00
+    c4f2:	03 24       	jz	$+8      	;abs 0xc4fa
+    c4f4:	3c 40 00 c4 	mov	#50176,	r12	;#0xc400
+    c4f8:	8d 12       	call	r13		;
+
+0000c4fa <.L19>:
+    c4fa:	d2 43 02 20 	mov.b	#1,	&0x2002	;r3 As==01
+
+0000c4fe <.L15>:
+    c4fe:	0a 17       	popm	#1,	r10	;16-bit words
+    c500:	30 41       	ret			
+
+0000c502 <call___do_global_dtors_aux>:
+    c502:	30 41       	ret			
+
+0000c504 <frame_dummy>:
+    c504:	3e 40 00 00 	mov	#0,	r14	;
+    c508:	0e 93       	cmp	#0,	r14	;r3 As==00
+    c50a:	05 24       	jz	$+12     	;abs 0xc516
+    c50c:	3c 40 00 c4 	mov	#50176,	r12	;#0xc400
+    c510:	3d 40 06 20 	mov	#8198,	r13	;#0x2006
+    c514:	8e 12       	call	r14		;
+
+0000c516 <.L26>:
+    c516:	3c 40 00 20 	mov	#8192,	r12	;#0x2000
+    c51a:	8c 93 00 00 	cmp	#0,	0(r12)	;r3 As==00
+    c51e:	03 20       	jnz	$+8      	;abs 0xc526
+
+0000c520 <.L27>:
+    c520:	b0 12 8c c4 	call	#50316		;#0xc48c
+    c524:	30 41       	ret			
+
+0000c526 <.L34>:
+    c526:	3d 40 00 00 	mov	#0,	r13	;
+    c52a:	0d 93       	cmp	#0,	r13	;r3 As==00
+    c52c:	f9 27       	jz	$-12     	;abs 0xc520
+    c52e:	8d 12       	call	r13		;
+    c530:	30 40 20 c5 	br	#0xc520		;
+
+0000c534 <call_frame_dummy>:
+    c534:	30 41       	ret			
+
+0000c536 <main>:
+    c536:	21 83       	decd	r1		;
+    c538:	b2 40 80 5a 	mov	#23168,	&0x01cc	;#0x5a80
+    c53c:	cc 01 
+    c53e:	d2 d3 25 02 	bis.b	#1,	&0x0225	;r3 As==01
+
+0000c542 <.L6>:
+    c542:	d2 d3 23 02 	bis.b	#1,	&0x0223	;r3 As==01
+    c546:	81 43 00 00 	mov	#0,	0(r1)	;r3 As==00
+
+0000c54a <.L2>:
+    c54a:	2c 41       	mov	@r1,	r12	;
+    c54c:	3d 40 0f 27 	mov	#9999,	r13	;#0x270f
+    c550:	0d 9c       	cmp	r12,	r13	;
+    c552:	04 38       	jl	$+10     	;abs 0xc55c
+    c554:	91 53 00 00 	inc	0(r1)		;
+    c558:	30 40 4a c5 	br	#0xc54a		;
+
+0000c55c <.L8>:
+    c55c:	d2 c3 23 02 	bic.b	#1,	&0x0223	;r3 As==01
+    c560:	81 43 00 00 	mov	#0,	0(r1)	;r3 As==00
+
+0000c564 <.L4>:
+    c564:	2c 41       	mov	@r1,	r12	;
+    c566:	3d 40 0f 27 	mov	#9999,	r13	;#0x270f
+    c56a:	0d 9c       	cmp	r12,	r13	;
+    c56c:	ea 3b       	jl	$-42     	;abs 0xc542
+    c56e:	91 53 00 00 	inc	0(r1)		;
+    c572:	30 40 64 c5 	br	#0xc564		;
+
+0000c576 <memset>:
+    c576:	0f 4c       	mov	r12,	r15	;
+    c578:	0e 5c       	add	r12,	r14	;
+
+0000c57a <.L2>:
+    c57a:	0f 9e       	cmp	r14,	r15	;
+    c57c:	05 24       	jz	$+12     	;abs 0xc588
+
+0000c57e <.LVL3>:
+    c57e:	cf 4d 00 00 	mov.b	r13,	0(r15)	;
+    c582:	1f 53       	inc	r15		;
+
+0000c584 <.LVL4>:
+    c584:	30 40 7a c5 	br	#0xc57a		;
+
+0000c588 <.L5>:
+    c588:	30 41       	ret			
+
+0000c58a <L0>:
+    c58a:	0a 15       	pushm	#1,	r10	;16-bit words
+    c58c:	1c 42 08 c4 	mov	&0xc408,r12	;0xc408
+    c590:	3c 93       	cmp	#-1,	r12	;r3 As==11
+    c592:	08 24       	jz	$+18     	;abs 0xc5a4
+    c594:	3a 40 08 c4 	mov	#50184,	r10	;#0xc408
+
+0000c598 <.L3>:
+    c598:	8c 12       	call	r12		;
+    c59a:	3a 50 fe ff 	add	#65534,	r10	;#0xfffe
+    c59e:	2c 4a       	mov	@r10,	r12	;
+    c5a0:	3c 93       	cmp	#-1,	r12	;r3 As==11
+    c5a2:	fa 23       	jnz	$-10     	;abs 0xc598
+
+0000c5a4 <.L1>:
+    c5a4:	0a 17       	popm	#1,	r10	;16-bit words
+    c5a6:	30 41       	ret			
+
+0000c5a8 <call___do_global_ctors_aux>:
+    c5a8:	30 41       	ret			
+
+0000c5aa <__msp430_init>:
+    c5aa:	b0 12 04 c5 	call	#50436		;#0xc504
+    c5ae:	b0 12 8a c5 	call	#50570		;#0xc58a
+
+0000c5b2 <L0>:
+    c5b2:	b0 12 40 c4 	call	#50240		;#0xc440
+
+0000c5b6 <.Loc.19.1>:
+    c5b6:	b0 12 32 c4 	call	#50226		;#0xc432
+
+0000c5ba <.Loc.20.1>:
+    c5ba:	30 41       	ret			
+
+0000c5bc <__msp430_fini>:
+    c5bc:	b0 12 4e c4 	call	#50254		;#0xc44e
+
+0000c5c0 <L0>:
+    c5c0:	b0 12 b6 c4 	call	#50358		;#0xc4b6
+
+0000c5c4 <L0>:
+    c5c4:	30 41       	ret			
