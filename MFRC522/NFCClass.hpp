@@ -20,21 +20,37 @@ MFRC522 mfrc522;
 class NFCClass {
     void SerialPrint(const char *data, int hex = 10) {
         if (hex == 16) {
-            //Serial.print(data, HEX);
+#ifdef _SPI_H_INCLUDED
+            Serial.print(data, HEX);
+#endif
+#ifdef HWLIB_H
             hwlib::cout << hwlib::hex << data;
+#endif
         } else {
-            //Serial.print(data);
+#ifdef _SPI_H_INCLUDED
+            Serial.print(data);
+#endif
+#ifdef HWLIB_H
             hwlib::cout << data;
+#endif
         }
     }
 
     void SerialPrint(const byte &data, int hex = 10) {
         if (hex == 16) {
-            //Serial.print(data, HEX);
-            hwlib::cout << hwlib::hex << (int) data;
+#ifdef _SPI_H_INCLUDED
+            Serial.print(data, HEX);
+#endif
+#ifdef HWLIB_H
+            hwlib::cout << hwlib::hex << (int)data;
+#endif
         } else {
-            //Serial.print(data);
-            hwlib::cout << (int) data;
+#ifdef _SPI_H_INCLUDED
+            Serial.print(data);
+#endif
+#ifdef HWLIB_H
+            hwlib::cout << (int)data;
+#endif
         }
     }
 
@@ -189,7 +205,7 @@ public:
         return keysLen;
     }
 
-    byte *getId(){
+    byte *getId() {
         return uid;
     }
 
