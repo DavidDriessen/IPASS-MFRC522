@@ -148,11 +148,10 @@ public:
 
     /**
      * Read all data of an RFID card.
-     * \param sector The number of the sector that you want too read.
      * \param data An array (with min size 16) of arrays (with min size 4) of arrays (with min size 16), to put the data in.
      * \param loop Wait for the data. Default = true.
      */
-    Status ReadAll(byte ***data, bool loop = true, int key = 0) {
+    Status ReadAll(byte ***data, bool loop = true) {
         for (int sector = 0; sector < 16; ++sector) {
             Status result = ReadSector(sector, data[sector], loop);
             if (result != OK) {
