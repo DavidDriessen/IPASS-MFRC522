@@ -20,6 +20,10 @@
 #ifdef _SPI_H_INCLUDED
 MFRC522 mfrc522;
 #endif
+#ifdef HWLIB_H
+#define HEX 16
+#endif
+
 
 /**
  * The NFCClass class is an simplified version of the implementation of a nfc reader.
@@ -27,22 +31,13 @@ MFRC522 mfrc522;
  * /author David Driessen
  */
 class NFCClass {
-    void SerialPrint(const char *data, int hex = 10) {
-        if (hex == 16) {
+    void SerialPrint(const char *data) {
 #ifdef _SPI_H_INCLUDED
-            Serial.print(data, HEX);
+        Serial.print(data);
 #endif
 #ifdef HWLIB_H
-            hwlib::cout << hwlib::hex << data;
+        hwlib::cout << data;
 #endif
-        } else {
-#ifdef _SPI_H_INCLUDED
-            Serial.print(data);
-#endif
-#ifdef HWLIB_H
-            hwlib::cout << data;
-#endif
-        }
     }
 
     void SerialPrint(const byte &data, int hex = 10) {
@@ -74,6 +69,7 @@ public:
     };
 
 #ifdef _SPI_H_INCLUDED
+
     /**
    * Default constructor
    */
@@ -236,11 +232,11 @@ public:
      * \param key The 6 bytes long array key to add to the key list.
      */
     void addKey(byte *key) {
+		if(sizeof(key)<16){
+			return;
+		}
         for (int i = 0; i < 16; ++i) {
             keys[keysLen][i] = key[i];
-        }
-        for (int j = 16; j < 16; ++j) {
-            keys[keysLen][j] = 0x00;
         }
         keysLen++;
     }

@@ -14,12 +14,12 @@ byte control[2][16] = {{0},
                        {1}};
 byte data[4][16] = {{0}};
 
-void NFCfunction(ArduinoConsole *pConsole) {
+void NFCConsole(ArduinoConsole *pConsole) {
     if (pConsole->checkParameters((char *) "addKey", 1)) {
         int count = 16;
         byte key[16] = {0};
         pConsole->ReadAsByte(key, count);
-        nfc.addKey(key, count);
+        nfc.addKey(key);
         return;
     }
 
@@ -46,6 +46,15 @@ void NFCfunction(ArduinoConsole *pConsole) {
                 Serial.print(data[0][i], HEX);
             }
             Serial.println();
+        }
+        if(result == nfc.AUTH){
+            Serial.println(" auth");
+        }
+        if(result == nfc.READ){
+            Serial.println(" read");
+        }
+        if(result == nfc.DEAUTH){
+            Serial.println(" deauth");
         }
         return;
     }
@@ -92,6 +101,15 @@ void NFCfunction(ArduinoConsole *pConsole) {
             }
             Serial.println();
         }
+        if(result == nfc.AUTH){
+            Serial.println(" auth");
+        }
+        if(result == nfc.WRITE){
+            Serial.println(" write");
+        }
+        if(result == nfc.DEAUTH){
+            Serial.println(" deauth");
+        }
         return;
     }
 
@@ -110,7 +128,7 @@ void setup() {
     console.begin();
     Serial.println("Start");
     nfc.printFirmwareVersion();
-    console.addCommand("nfc", NFCfunction);
+    console.addCommand("nfc", NFCConsole);
     lock.attach(11);
     lock.write(5);
     Serial.println("Present card");

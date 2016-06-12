@@ -33,6 +33,8 @@ Discarded input sections
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
@@ -125,22 +127,10 @@ Discarded input sections
                 0x00000000        0x8 main.o
  .text._ZN14ArduinoConsole12getParameterEi
                 0x00000000       0x18 main.o
- .text._ZN14ArduinoConsole15checkParametersEPci
-                0x00000000       0x64 main.o
- .text._ZN14ArduinoConsole10charToByteEPcRiPh
-                0x00000000       0xea main.o
  .text._ZN14ArduinoConsole18getParameterAsByteEPhi
                 0x00000000       0x2e main.o
- .text._ZN14ArduinoConsole10ReadAsByteEPhRi
-                0x00000000       0x2e main.o
- .text._ZN14ArduinoConsole9charToIntEPc
-                0x00000000       0x4e main.o
- .text._ZN14ArduinoConsole17getParameterAsIntEi
-                0x00000000       0x1c main.o
  .text._ZN14ArduinoConsole9ReadAsIntEv
                 0x00000000       0x28 main.o
- .text._Z10printBytesPKcPhhb
-                0x00000000       0x8c main.o
  .rodata._ZTVN5hwlib19_pin_in_dummy_classE
                 0x00000000        0xc main.o
  .rodata._ZTVN5hwlib20_pin_out_dummy_classE
@@ -232,7 +222,7 @@ END GROUP
                 [!provide]                PROVIDE (__ram_size, __ram_size)
                 [!provide]                PROVIDE (__ram_end, __ram_end)
 
-.text           0x00000000     0x15b8
+.text           0x00000000     0x1dd4
                 0x00000000                . = ALIGN (0x4)
                 0x00000000                __text_start = .
                 [!provide]                PROVIDE (__text_start, __text_start)
@@ -263,216 +253,248 @@ END GROUP
  .text._ZN3due10pin_in_out3setEb
                 0x00000060        0xe main.o
                 0x00000060                due::pin_in_out::set(bool)
+ .text._ZN8NFCClass10WriteBlockEiPhb.part.22
+                0x0000006e       0x14 main.o
  .text._ZN5hwlib7ostreamlsEc
-                0x0000006e        0xe main.o
-                0x0000006e                hwlib::ostream::operator<<(char)
+                0x00000082        0xe main.o
+                0x00000082                hwlib::ostream::operator<<(char)
  .text._ZN5hwliblsERNS_7ostreamEPKc
-                0x0000007c       0x68 main.o
-                0x0000007c                hwlib::operator<<(hwlib::ostream&, char const*)
+                0x00000090       0x68 main.o
+                0x00000090                hwlib::operator<<(hwlib::ostream&, char const*)
+ .text._ZN8NFCClass11SerialPrintEPKc.isra.13
+                0x000000f8       0x10 main.o
  .text._ZN5hwliblsERNS_7ostreamEi
-                0x000000e4       0xd4 main.o
-                0x000000e4                hwlib::operator<<(hwlib::ostream&, int)
+                0x00000108       0xd4 main.o
+                0x00000108                hwlib::operator<<(hwlib::ostream&, int)
  .text._ZN3due8pin_infoENS_4pinsE
-                0x000001b8       0x20 main.o
-                0x000001b8                due::pin_info(due::pins)
+                0x000001dc       0x20 main.o
+                0x000001dc                due::pin_info(due::pins)
  .text._ZN3due14port_registersEi
-                0x000001d8       0x48 main.o
-                0x000001d8                due::port_registers(int)
+                0x000001fc       0x48 main.o
+                0x000001fc                due::port_registers(int)
  .text._ZN3due7pin_outC2ENS_4pinsE
-                0x00000220       0x34 main.o
-                0x00000220                due::pin_out::pin_out(due::pins)
-                0x00000220                due::pin_out::pin_out(due::pins)
+                0x00000244       0x34 main.o
+                0x00000244                due::pin_out::pin_out(due::pins)
+                0x00000244                due::pin_out::pin_out(due::pins)
  .text._ZN3due6now_usEv
-                0x00000254       0x78 main.o
-                0x00000254                due::now_us()
- *fill*         0x000002cc        0x4 
+                0x00000278       0x78 main.o
+                0x00000278                due::now_us()
  .text._ZN5hwlib7wait_usEi
-                0x000002d0       0x28 main.o
-                0x000002d0                hwlib::wait_us(int)
+                0x000002f0       0x28 main.o
+                0x000002f0                hwlib::wait_us(int)
  .text._ZN5hwlib24uart_putc_bit_banged_pinEcRNS_7pin_outE
-                0x000002f8       0x5c main.o
-                0x000002f8                hwlib::uart_putc_bit_banged_pin(char, hwlib::pin_out&)
+                0x00000318       0x5c main.o
+                0x00000318                hwlib::uart_putc_bit_banged_pin(char, hwlib::pin_out&)
  .text._ZN5hwlib33spi_bus_bit_banged_sclk_mosi_miso14write_and_readERNS_7pin_outEiPKhPh
-                0x00000354       0xa2 main.o
-                0x00000354                hwlib::spi_bus_bit_banged_sclk_mosi_miso::write_and_read(hwlib::pin_out&, int, unsigned char const*, unsigned char*)
+                0x00000374       0xa2 main.o
+                0x00000374                hwlib::spi_bus_bit_banged_sclk_mosi_miso::write_and_read(hwlib::pin_out&, int, unsigned char const*, unsigned char*)
  .text._ZN5hwlib7wait_msEi
-                0x000003f6       0x16 main.o
-                0x000003f6                hwlib::wait_ms(int)
+                0x00000416       0x16 main.o
+                0x00000416                hwlib::wait_ms(int)
  .text._ZN5hwlib9uart_putcEc
-                0x0000040c       0x3c main.o
-                0x0000040c                hwlib::uart_putc(char)
+                0x0000042c       0x3c main.o
+                0x0000042c                hwlib::uart_putc(char)
  .text._ZN5hwlib20cout_using_uart_putc4putcEc
-                0x00000448        0xa main.o
-                0x00000448                hwlib::cout_using_uart_putc::putc(char)
+                0x00000468        0xa main.o
+                0x00000468                hwlib::cout_using_uart_putc::putc(char)
  .text._ZN5hwlib6now_usEv
-                0x00000452        0x8 main.o
-                0x00000452                hwlib::now_us()
+                0x00000472        0x8 main.o
+                0x00000472                hwlib::now_us()
  .text._ZN5hwlib24uart_getc_bit_banged_pinERNS_6pin_inE
-                0x0000045a       0x6c main.o
-                0x0000045a                hwlib::uart_getc_bit_banged_pin(hwlib::pin_in&)
- *fill*         0x000004c6        0x2 
+                0x0000047a       0x6c main.o
+                0x0000047a                hwlib::uart_getc_bit_banged_pin(hwlib::pin_in&)
+ *fill*         0x000004e6        0x2 
  .text._ZN5hwlib9uart_getcEv
-                0x000004c8       0x38 main.o
-                0x000004c8                hwlib::uart_getc()
+                0x000004e8       0x38 main.o
+                0x000004e8                hwlib::uart_getc()
  .text._ZN13SPIsetupClassC2Ev
-                0x00000500       0xb4 main.o
-                0x00000500                SPIsetupClass::SPIsetupClass()
-                0x00000500                SPIsetupClass::SPIsetupClass()
+                0x00000520       0xb4 main.o
+                0x00000520                SPIsetupClass::SPIsetupClass()
+                0x00000520                SPIsetupClass::SPIsetupClass()
  .text._ZN13SPIsetupClass14write_and_readEiiPhS0_
-                0x000005b4       0x22 main.o
-                0x000005b4                SPIsetupClass::write_and_read(int, int, unsigned char*, unsigned char*)
+                0x000005d4       0x22 main.o
+                0x000005d4                SPIsetupClass::write_and_read(int, int, unsigned char*, unsigned char*)
  .text._ZN7MFRC5227ReadRegEh
-                0x000005d6       0x34 main.o
-                0x000005d6                MFRC522::ReadReg(unsigned char)
+                0x000005f6       0x34 main.o
+                0x000005f6                MFRC522::ReadReg(unsigned char)
  .text._ZN7MFRC52218getFirmwareVersionEv
-                0x0000060a        0xa main.o
-                0x0000060a                MFRC522::getFirmwareVersion()
+                0x0000062a        0xa main.o
+                0x0000062a                MFRC522::getFirmwareVersion()
  .text._ZN7MFRC5228WriteRegEhh
-                0x00000614       0x2c main.o
-                0x00000614                MFRC522::WriteReg(unsigned char, unsigned char)
+                0x00000634       0x2c main.o
+                0x00000634                MFRC522::WriteReg(unsigned char, unsigned char)
  .text._ZN7MFRC5228WriteRegEhhPh
-                0x00000640       0x52 main.o
-                0x00000640                MFRC522::WriteReg(unsigned char, unsigned char, unsigned char*)
+                0x00000660       0x52 main.o
+                0x00000660                MFRC522::WriteReg(unsigned char, unsigned char, unsigned char*)
  .text._ZN7MFRC52212ClearBitMaskEhh
-                0x00000692       0x1c main.o
-                0x00000692                MFRC522::ClearBitMask(unsigned char, unsigned char)
+                0x000006b2       0x1c main.o
+                0x000006b2                MFRC522::ClearBitMask(unsigned char, unsigned char)
  .text._ZN7MFRC52210SetBitMaskEhh
-                0x000006ae       0x1c main.o
-                0x000006ae                MFRC522::SetBitMask(unsigned char, unsigned char)
+                0x000006ce       0x1c main.o
+                0x000006ce                MFRC522::SetBitMask(unsigned char, unsigned char)
  .text._ZN7MFRC5225beginEi
-                0x000006ca       0x9c main.o
-                0x000006ca                MFRC522::begin(int)
+                0x000006ea       0x9c main.o
+                0x000006ea                MFRC522::begin(int)
  .text._ZN7MFRC52213calculate_crcEPhiS0_
-                0x00000766       0x76 main.o
-                0x00000766                MFRC522::calculate_crc(unsigned char*, int, unsigned char*)
+                0x00000786       0x76 main.o
+                0x00000786                MFRC522::calculate_crc(unsigned char*, int, unsigned char*)
  .text._ZN7MFRC52214DeauthenticateEv
-                0x000007dc       0x9a main.o
-                0x000007dc                MFRC522::Deauthenticate()
+                0x000007fc       0x9a main.o
+                0x000007fc                MFRC522::Deauthenticate()
  .text._ZN7MFRC52211CommunicateEhPhhS0_S0_S0_b
-                0x00000876      0x190 main.o
-                0x00000876                MFRC522::Communicate(unsigned char, unsigned char*, unsigned char, unsigned char*, unsigned char*, unsigned char*, bool)
- .text._ZN7MFRC52210WriteBlockEhPhh
-                0x00000a06       0xe8 main.o
-                0x00000a06                MFRC522::WriteBlock(unsigned char, unsigned char*, unsigned char)
+                0x00000896      0x190 main.o
+                0x00000896                MFRC522::Communicate(unsigned char, unsigned char*, unsigned char, unsigned char*, unsigned char*, unsigned char*, bool)
  .text._ZN7MFRC52212AuthenticateEhhPhS0_
-                0x00000aee       0x4c main.o
-                0x00000aee                MFRC522::Authenticate(unsigned char, unsigned char, unsigned char*, unsigned char*)
- .text._ZN7MFRC5229GetCardIdEPh
-                0x00000b3a       0x5a main.o
-                0x00000b3a                MFRC522::GetCardId(unsigned char*)
+                0x00000a26       0x4c main.o
+                0x00000a26                MFRC522::Authenticate(unsigned char, unsigned char, unsigned char*, unsigned char*)
  .text._ZN7MFRC52210DetectCardEv
-                0x00000b94       0x5a main.o
-                0x00000b94                MFRC522::DetectCard()
+                0x00000a72       0x5a main.o
+                0x00000a72                MFRC522::DetectCard()
+ .text._ZN7MFRC5229GetCardIdEPh
+                0x00000acc       0x5a main.o
+                0x00000acc                MFRC522::GetCardId(unsigned char*)
  .text._ZN7MFRC52210SelectCardEPh
-                0x00000bee       0xba main.o
-                0x00000bee                MFRC522::SelectCard(unsigned char*)
+                0x00000b26       0xba main.o
+                0x00000b26                MFRC522::SelectCard(unsigned char*)
+ .text._ZN7MFRC52210WriteBlockEhPhh
+                0x00000be0       0xe8 main.o
+                0x00000be0                MFRC522::WriteBlock(unsigned char, unsigned char*, unsigned char)
  .text._ZN7MFRC5229ReadBlockEhPhRh
-                0x00000ca8       0x7a main.o
-                0x00000ca8                MFRC522::ReadBlock(unsigned char, unsigned char*, unsigned char&)
- *fill*         0x00000d22        0x2 
+                0x00000cc8       0x7a main.o
+                0x00000cc8                MFRC522::ReadBlock(unsigned char, unsigned char*, unsigned char&)
+ *fill*         0x00000d42        0x2 
+ .text._ZN8NFCClass20printFirmwareVersionEv
+                0x00000d44       0x8c main.o
+                0x00000d44                NFCClass::printFirmwareVersion()
+ .text._ZN8NFCClass7prepareEb
+                0x00000dd0       0x40 main.o
+                0x00000dd0                NFCClass::prepare(bool)
  .text._ZN14ArduinoConsole16printCommandListEPS_
-                0x00000d24       0x3c main.o
-                0x00000d24                ArduinoConsole::printCommandList(ArduinoConsole*)
+                0x00000e10       0x3c main.o
+                0x00000e10                ArduinoConsole::printCommandList(ArduinoConsole*)
  .text._Z13printCommandsP14ArduinoConsole
-                0x00000d60        0x6 main.o
-                0x00000d60                printCommands(ArduinoConsole*)
+                0x00000e4c        0x6 main.o
+                0x00000e4c                printCommands(ArduinoConsole*)
  .text._ZN14ArduinoConsole10addCommandEPKcPFvPS_E
-                0x00000d66       0x2a main.o
-                0x00000d66                ArduinoConsole::addCommand(char const*, void (*)(ArduinoConsole*))
+                0x00000e52       0x2a main.o
+                0x00000e52                ArduinoConsole::addCommand(char const*, void (*)(ArduinoConsole*))
  .text._ZN14ArduinoConsoleC2Ev
-                0x00000d90       0x58 main.o
-                0x00000d90                ArduinoConsole::ArduinoConsole()
-                0x00000d90                ArduinoConsole::ArduinoConsole()
+                0x00000e7c       0x58 main.o
+                0x00000e7c                ArduinoConsole::ArduinoConsole()
+                0x00000e7c                ArduinoConsole::ArduinoConsole()
+ .text._ZN14ArduinoConsole15checkParametersEPci
+                0x00000ed4       0x64 main.o
+                0x00000ed4                ArduinoConsole::checkParameters(char*, int)
  .text._ZN14ArduinoConsole4ReadEPcRi
-                0x00000de8       0x70 main.o
-                0x00000de8                ArduinoConsole::Read(char*, int&)
+                0x00000f38       0x70 main.o
+                0x00000f38                ArduinoConsole::Read(char*, int&)
  .text._ZN14ArduinoConsole3runEv
-                0x00000e58      0x184 main.o
-                0x00000e58                ArduinoConsole::run()
+                0x00000fa8      0x184 main.o
+                0x00000fa8                ArduinoConsole::run()
+ .text._ZN14ArduinoConsole10charToByteEPcRiPh
+                0x0000112c       0xea main.o
+                0x0000112c                ArduinoConsole::charToByte(char*, int&, unsigned char*)
+ .text._ZN14ArduinoConsole10ReadAsByteEPhRi
+                0x00001216       0x2e main.o
+                0x00001216                ArduinoConsole::ReadAsByte(unsigned char*, int&)
+ .text._ZN14ArduinoConsole9charToIntEPc
+                0x00001244       0x4e main.o
+                0x00001244                ArduinoConsole::charToInt(char*)
+ .text._ZN14ArduinoConsole17getParameterAsIntEi
+                0x00001292       0x1c main.o
+                0x00001292                ArduinoConsole::getParameterAsInt(int)
+ *fill*         0x000012ae        0x2 
+ .text._Z10printBytesPKcPhhb
+                0x000012b0       0x8c main.o
+                0x000012b0                printBytes(char const*, unsigned char*, unsigned char, bool)
+ .text._Z10NFCConsoleP14ArduinoConsole
+                0x0000133c      0x310 main.o
+                0x0000133c                NFCConsole(ArduinoConsole*)
  .text.startup.main
-                0x00000fdc       0x6c main.o
-                0x00000fdc                main
+                0x0000164c       0xc8 main.o
+                0x0000164c                main
  .text.__startup
-                0x00001048       0x48 bmptk_cortex.o
-                0x00001048                __startup
- .text          0x00001090       0x30 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
-                0x00001090                __aeabi_uldivmod
- .text          0x000010c0      0x2ec c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
-                0x000010c0                __udivmoddi4
- .text          0x000013ac        0x4 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
-                0x000013ac                __aeabi_ldiv0
- .text.memset   0x000013b0       0x9c c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
-                0x000013b0                memset
-                0x0000144c                . = ALIGN (0x4)
+                0x00001714       0x48 bmptk_cortex.o
+                0x00001714                __startup
+ .text          0x0000175c       0x30 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                0x0000175c                __aeabi_uldivmod
+ .text          0x0000178c      0x2ec c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+                0x0000178c                __udivmoddi4
+ .text          0x00001a78        0x4 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x00001a78                __aeabi_ldiv0
+ .text.memset   0x00001a7c       0x9c c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x00001a7c                memset
+                0x00001b18                . = ALIGN (0x4)
  *(.glue_7t .glue_7)
- .glue_7        0x0000144c        0x0 linker stubs
- .glue_7t       0x0000144c        0x0 linker stubs
-                0x0000144c                . = ALIGN (0x4)
+ .glue_7        0x00001b18        0x0 linker stubs
+ .glue_7t       0x00001b18        0x0 linker stubs
+                0x00001b18                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata._ZTVN5hwlib20cout_using_uart_putcE
-                0x0000144c       0x10 main.o
-                0x0000144c                vtable for hwlib::cout_using_uart_putc
+                0x00001b18       0x10 main.o
+                0x00001b18                vtable for hwlib::cout_using_uart_putc
  .rodata._ZTVN5hwlib33spi_bus_bit_banged_sclk_mosi_misoE
-                0x0000145c        0xc main.o
-                0x0000145c                vtable for hwlib::spi_bus_bit_banged_sclk_mosi_miso
+                0x00001b28        0xc main.o
+                0x00001b28                vtable for hwlib::spi_bus_bit_banged_sclk_mosi_miso
  .rodata._ZTVN3due6pin_inE
-                0x00001468        0xc main.o
-                0x00001468                vtable for due::pin_in
+                0x00001b34        0xc main.o
+                0x00001b34                vtable for due::pin_in
  .rodata._ZTVN3due7pin_outE
-                0x00001474        0xc main.o
-                0x00001474                vtable for due::pin_out
+                0x00001b40        0xc main.o
+                0x00001b40                vtable for due::pin_out
  .rodata._ZTVN3due10pin_in_outE
-                0x00001480       0x18 main.o
-                0x00001480                vtable for due::pin_in_out
+                0x00001b4c       0x18 main.o
+                0x00001b4c                vtable for due::pin_in_out
  .rodata._ZTV7MFRC522
-                0x00001498       0x2c main.o
-                0x00001498                vtable for MFRC522
+                0x00001b64       0x2c main.o
+                0x00001b64                vtable for MFRC522
  .rodata.str1.1
-                0x000014c4       0x50 main.o
-                                 0x52 (size before relaxing)
+                0x00001b90      0x19d main.o
+                                0x1a5 (size before relaxing)
  .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
-                0x00001514       0xa4 main.o
-                0x000015b8                . = ALIGN (0x4)
+                0x00001d2d       0xa4 main.o
+                0x00001dd4                . = ALIGN (0x4)
+ *fill*         0x00001dd1        0x3 
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000015b8                . = ALIGN (0x4)
+                0x00001dd4                . = ALIGN (0x4)
  *(.gcc_except_table)
-                0x000015b8                . = ALIGN (0x4)
+                0x00001dd4                . = ALIGN (0x4)
  *(.eh_frame_hdr)
-                0x000015b8                . = ALIGN (0x4)
+                0x00001dd4                . = ALIGN (0x4)
  *(.eh_frame)
-                0x000015b8                . = ALIGN (0x4)
-                0x000015b8                __text_end = .
+                0x00001dd4                . = ALIGN (0x4)
+                0x00001dd4                __text_end = .
                 [!provide]                PROVIDE (__text_end, __text_end)
 
-.vfp11_veneer   0x000015b8        0x0
- .vfp11_veneer  0x000015b8        0x0 linker stubs
+.vfp11_veneer   0x00001dd4        0x0
+ .vfp11_veneer  0x00001dd4        0x0 linker stubs
 
-.v4_bx          0x000015b8        0x0
- .v4_bx         0x000015b8        0x0 linker stubs
+.v4_bx          0x00001dd4        0x0
+ .v4_bx         0x00001dd4        0x0 linker stubs
 
-.iplt           0x000015b8        0x0
- .iplt          0x000015b8        0x0 main.o
+.iplt           0x00001dd4        0x0
+ .iplt          0x00001dd4        0x0 main.o
 
 .IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
  *(.init)
  *(.preinit_array)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x000015b8                . = ALIGN (0x4)
-                0x000015b8                __exidx_start = .
+                0x00001dd4                . = ALIGN (0x4)
+                0x00001dd4                __exidx_start = .
                 [!provide]                PROVIDE (__exidx_start, __exidx_start)
 
-.ARM.exidx      0x000015b8        0x8
+.ARM.exidx      0x00001dd4        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000015b8        0x8 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x00001dd4        0x8 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(_udivmoddi4.o)
 
-.rel.dyn        0x000015c0        0x0
- .rel.iplt      0x000015c0        0x0 main.o
-                0x000015c0                . = ALIGN (0x4)
-                0x000015c0                __exidx_end = .
+.rel.dyn        0x00001ddc        0x0
+ .rel.iplt      0x00001ddc        0x0 main.o
+                0x00001ddc                . = ALIGN (0x4)
+                0x00001ddc                __exidx_end = .
                 [!provide]                PROVIDE (__exidx_end, __exidx_end)
 
-.bss            0x20000000    0x12034
+.bss            0x20000000    0x12078
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __stack_start = .
                 [!provide]                PROVIDE (__stack_start, __stack_start)
@@ -501,44 +523,48 @@ END GROUP
                 0x2001201c        0x4 main.o
  .bss._ZGVZN5hwlib9uart_getcEvE3pin
                 0x20012020        0x4 main.o
- *fill*         0x20012024        0x4 
+ .bss.data      0x20012024       0x40 main.o
+                0x20012024                data
+ *fill*         0x20012064        0x4 
  .bss._ZZN3due6now_usEvE4high
-                0x20012028        0x8 main.o
+                0x20012068        0x8 main.o
  .bss._ZZN3due6now_usEvE9init_done
-                0x20012030        0x1 main.o
-                0x20012034                . = ALIGN (0x4)
- *fill*         0x20012031        0x3 
+                0x20012070        0x1 main.o
+ *fill*         0x20012071        0x3 
+ .bss.nfc       0x20012074        0x4 main.o
+                0x20012074                nfc
+                0x20012078                . = ALIGN (0x4)
  *(COMMON)
-                0x20012034                . = ALIGN (0x4)
-                0x20012034                __bss_end = .
+                0x20012078                . = ALIGN (0x4)
+                0x20012078                __bss_end = .
                 [!provide]                PROVIDE (__bss_end, __bss_end)
 
-.data           0x20012034       0x14 load address 0x000015c0
-                0x20012034                . = ALIGN (0x4)
-                0x000015c0                __data_init_start = LOADADDR (.data)
+.data           0x20012078       0x14 load address 0x00001ddc
+                0x20012078                . = ALIGN (0x4)
+                0x00001ddc                __data_init_start = LOADADDR (.data)
                 [!provide]                PROVIDE (__data_init_start, __data_init_start)
-                0x20012034                __data_start = .
+                0x20012078                __data_start = .
                 [!provide]                PROVIDE (__data_start, __data_start)
-                0x20012034                . = ALIGN (0x4)
+                0x20012078                . = ALIGN (0x4)
  *(.data .data.* .gnu.linkonce.d.*)
  .data._ZN5hwlib4coutE
-                0x20012034       0x14 main.o
-                0x20012034                hwlib::cout
-                0x20012048                . = ALIGN (0x4)
-                0x20012048                __data_end = .
+                0x20012078       0x14 main.o
+                0x20012078                hwlib::cout
+                0x2001208c                . = ALIGN (0x4)
+                0x2001208c                __data_end = .
                 [!provide]                PROVIDE (__data_end, __data_end)
-                0x000015c0                __data_init_end = LOADADDR (.data)
+                0x00001ddc                __data_init_end = LOADADDR (.data)
                 [!provide]                PROVIDE (__data_init_end, __data_init_end)
                 0x00000014                PROVIDE (__data_size, (__data_end - __data_start))
                 0x00000014                PROVIDE (__data_init_size, __data_size)
                 [!provide]                PROVIDE (__data_init_end, (__data_init_start + __data_init_size))
 
-.igot.plt       0x20012048        0x0 load address 0x000015d4
- .igot.plt      0x20012048        0x0 main.o
-                0x20012048                . = ALIGN (0x4)
-                0x20012048                __heap_start = .
+.igot.plt       0x2001208c        0x0 load address 0x00001df0
+ .igot.plt      0x2001208c        0x0 main.o
+                0x2001208c                . = ALIGN (0x4)
+                0x2001208c                __heap_start = .
                 [!provide]                PROVIDE (__heap_start, __heap_start)
-                0x20012048                . = ALIGN (0x4)
+                0x2001208c                . = ALIGN (0x4)
                 0x20018000                __heap_end = __ram_end
                 [!provide]                PROVIDE (__heap_end, __heap_end)
 

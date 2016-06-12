@@ -114,7 +114,7 @@ bool ArduinoConsole::Read(char *data, int &count, bool loop) {
 void ArduinoConsole::run(bool loop) {
     if (enter) {
         enter = false;
-        Serial.print("Arduino:\t");
+        Serial.print("\nArduino:\t");
     }
     if (!Read(serialInData, serialInCount, loop)) {
         return;
@@ -191,6 +191,9 @@ int ArduinoConsole::getParameterAsInt(int pos) {
 }
 
 void ArduinoConsole::charToByte(char *data, int &count, byte *out) {
+    for (int k = 0; k < 16; ++k) {
+        out[k] = 0x00;
+    }
     int index = 0;
     for (int i = 0; i < count; i += 2) {
         if (data[i] == '0' || data[i] == 'X' || data[i] == 'x' || data[i] == ' ' || data[i] == ',' || data[i] == 0) {
