@@ -1,6 +1,11 @@
 //
 // Created by david on 5/18/2016.
 //
+//          Copyright David Driessen 2016 - 2020.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+
 #ifndef IPASS_NFC_H
 #define IPASS_NFC_H
 
@@ -115,7 +120,7 @@ class MFRC522 : public nfcController {
     byte ReadReg(byte reg) {
         byte read[2] = {0};
         byte write[2] = {0};
-        write[0] = (byte) (0x80 | ((reg << 1) & 0x7E));
+        write[0] = (byte)(0x80 | ((reg << 1) & 0x7E));
         write[1] = 0x00;
         SPIsetup.write_and_read(chipSelect, 2, write, read);
         return read[1];
@@ -126,7 +131,7 @@ class MFRC522 : public nfcController {
         byte out[30] = {0};
         byte in[30] = {0};
         for (int i = 0; i < count - 1; i++) {
-            out[i] = (byte) (0x80 | ((reg << 1) & 0x7E));
+            out[i] = (byte)(0x80 | ((reg << 1) & 0x7E));
         }
         out[count] = 0x00;
         SPIsetup.write_and_read(chipSelect, count, out, in);
@@ -138,7 +143,7 @@ class MFRC522 : public nfcController {
     void WriteReg(byte reg, byte value) {
         byte read[2] = {0};
         byte write[2] = {0};
-        write[0] = (byte) ((reg << 1) & 0x7E);
+        write[0] = (byte)((reg << 1) & 0x7E);
         write[1] = value;
         SPIsetup.write_and_read(chipSelect, 2, write, read);
     }
@@ -149,7 +154,7 @@ class MFRC522 : public nfcController {
         for (int i = 1; i < count; i++) {
             out[i] = values[i - 1];
         }
-        out[0] = (byte) ((reg << 1) & 0x7E);
+        out[0] = (byte)((reg << 1) & 0x7E);
         SPIsetup.write_and_read(chipSelect, count, out, nullptr);
     }
 
@@ -179,7 +184,7 @@ class MFRC522 : public nfcController {
                      bool checkCRC = false) {
         byte waitIRq = 0, n, _validBits = 0;
 
-        byte bitFraming = (byte) (validBits ? *validBits : 0);
+        byte bitFraming = (byte)(validBits ? *validBits : 0);
 
         if (command == CMD_Transceive) {
             waitIRq = 0x30;
@@ -222,7 +227,7 @@ class MFRC522 : public nfcController {
             }
             *backLen = n;
             ReadReg(FIFODataReg, n, backData);
-            _validBits = (byte) (ReadReg(ControlReg) & 0x07);
+            _validBits = (byte)(ReadReg(ControlReg) & 0x07);
             if (validBits) {
                 *validBits = _validBits;
             }
@@ -234,7 +239,7 @@ class MFRC522 : public nfcController {
 
         if (backData && backLen && checkCRC) {
             byte controlBuffer[2];
-            if (!calculate_crc(&backData[0], (byte) (*backLen - 2), &controlBuffer[0])) {
+            if (!calculate_crc(&backData[0], (byte)(*backLen - 2), &controlBuffer[0])) {
                 return 0;
             }
             if ((backData[*backLen - 2] != controlBuffer[0]) || (backData[*backLen - 1] != controlBuffer[1])) {
@@ -280,11 +285,11 @@ public:
 public:
 #endif
 
-    void begin(int cs = 0) {
+    void begin(int chipSelect = 0) {
 #ifdef _SPI_H_INCLUDED
         SPIsetup.begin();
 #endif
-        chipSelect = cs;
+        this->chipSelect = chipSelect;
 
         if (SPIsetup.readReset() == 0) {
             SPIsetup.writeReset(1);

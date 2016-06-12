@@ -1,10 +1,20 @@
 //
 // Created by david on 5/18/2016.
 //
+//          Copyright David Driessen 2016 - 2020.
+// Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//          http://www.boost.org/LICENSE_1_0.txt)
+
 #ifndef IPASS_SPISETUP_H
 #define IPASS_SPISETUP_H
 
 #ifdef HWLIB_H
+/**
+* Controller for the SPI protocol in the hwlib library.
+*
+* /author David Driessen
+*/
 class SPIsetupClass {
     hwlib::target::pin_out chipSelect0;
     hwlib::target::pin_out chipSelect1;
@@ -28,9 +38,9 @@ public:
         hwlib::wait_ms(5);
     }
 
-    SPIsetupClass(hwlib::target::pins sckPin, hwlib::target::pins mosiPin, hwlib::target::pins misoPin) :
-            chipSelect0(hwlib::target::pins::cs0),
-            chipSelect1(hwlib::target::pins::cs1),
+    SPIsetupClass(hwlib::target::pins sckPin, hwlib::target::pins mosiPin, hwlib::target::pins misoPin, hwlib::target::pins cs0 = hwlib::target::pins::cs0, hwlib::target::pins cs1 = hwlib::target::pins::cs1) :
+            chipSelect0(cs0),
+            chipSelect1(cs1),
             resetPin(hwlib::target::pins::d9),
             sck(sckPin),
             mosi(mosiPin),
@@ -64,7 +74,11 @@ public:
 #endif //HWLIB_H
 
 #ifdef _SPI_H_INCLUDED
-
+/**
+* Controller for the SPI protocol in the Arduino library.
+*
+* /author David Driessen
+*/
 class SPIsetupClass {
     uint32_t chipSelect0 = 10;
     uint32_t chipSelect1 = 50;
@@ -72,7 +86,9 @@ class SPIsetupClass {
 
 public:
 
-    void begin() {
+    void begin(uint32_t chipSelect0 = 10, uint32_t chipSelect1 = 50) {
+        this->chipSelect0 = chipSelect0;
+        this->chipSelect1 = chipSelect1;
         SPI.begin();
         pinMode(chipSelect0, OUTPUT);
         pinMode(chipSelect1, OUTPUT);
@@ -115,4 +131,4 @@ public:
     }
 };
 #endif //_SPI_H_INCLUDED
-#endif //IPASS_NFCDEFAULT_H
+#endif //IPASS_SPISETUP_H
