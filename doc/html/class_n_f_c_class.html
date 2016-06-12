@@ -117,8 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4fb924c50df698857a4e5d73f6128676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4b8021e69835f4ba2614a80aba9561"><td class="memItemLeft" align="right" valign="top">Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_f_c_class.html#a9f4b8021e69835f4ba2614a80aba9561">ReadSector</a> (int sector, byte **data, bool loop=true)</td></tr>
 <tr class="separator:a9f4b8021e69835f4ba2614a80aba9561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22e3f48ea41a7123191864c8f8932357"><td class="memItemLeft" align="right" valign="top">Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_f_c_class.html#a22e3f48ea41a7123191864c8f8932357">ReadAll</a> (byte ***data, bool loop=true, int key=0)</td></tr>
-<tr class="separator:a22e3f48ea41a7123191864c8f8932357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf42acd686ca7058b08b0a64207fb463"><td class="memItemLeft" align="right" valign="top">Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_f_c_class.html#abf42acd686ca7058b08b0a64207fb463">ReadAll</a> (byte ***data, bool loop=true)</td></tr>
+<tr class="separator:abf42acd686ca7058b08b0a64207fb463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a342248c5529e19eed286693216677f25"><td class="memItemLeft" align="right" valign="top">Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_f_c_class.html#a342248c5529e19eed286693216677f25">WriteBlock</a> (int block, byte *data, bool loop=true)</td></tr>
 <tr class="separator:a342248c5529e19eed286693216677f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47922cd41b451502dc660b1ccc7d1afd"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_f_c_class.html#a47922cd41b451502dc660b1ccc7d1afd">getFirmwareVersion</a> ()</td></tr>
@@ -356,7 +356,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a22e3f48ea41a7123191864c8f8932357"></a>
+<a class="anchor" id="abf42acd686ca7058b08b0a64207fb463"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -373,13 +373,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>loop</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>loop</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -395,7 +389,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Read all data of an RFID card. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sector</td><td>The number of the sector that you want too read. </td></tr>
     <tr><td class="paramname">data</td><td>An array (with min size 16) of arrays (with min size 4) of arrays (with min size 16), to put the data in. </td></tr>
     <tr><td class="paramname">loop</td><td>Wait for the data. Default = true. </td></tr>
   </table>
@@ -554,7 +547,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 12 2016 16:28:35 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 12 2016 19:24:49 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
