@@ -2,31 +2,14 @@
 ============
 MFRC522							{#MFRC522}
 ============
-Library for MFRC522 chip;
+
+Mfrc522 is an Arduino library for the RFID-RC522 NFC chip.
+
+The library is compatible with the [Arduino.h](@ref Arduino) and the [hwlib.hpp](@ref Hwlib) library’s
+
+For now, the library is tested with the Mifare Classic RFID cards.
 
 
-## Arduino.h (Platformio) ##	{#platformio}
-
-~~~~~~~~~~~~~~~{.cpp}
-NFCClass nfc;
-byte data[16] = {{0}};
-void setup(){
-	nfc.begin();
-}
-void loop(){
-	if(nfc.ReadBlock(4,data)){
-		for (int i = 0; i < 16; ++i) {
-			Serial.print(" ");
-			Serial.print("0x");
-			if (data[0][i] < 0x10) {
-				Serial.print("0");
-			}
-		Serial.print(data[0][i], HEX);
-		}
-		Serial.println();
-	}
-}
-~~~~~~~~~~~~~~~
 
 
 ## Software License ##			{#license}

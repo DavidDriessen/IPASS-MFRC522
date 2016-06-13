@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>MFRC522: Related Pages</title>
+<title>MFRC522: Arduino implementation          {#Arduino.md}</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,7 +59,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,21 +73,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">Arduino implementation {#Arduino.md} </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="Arduino.html" target="_self">Arduino implementation</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="Hwlib.html" target="_self">Hwlib implementation</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><div class="fragment"><div class="line"><a class="code" href="class_n_f_c_class.html">NFCClass</a> nfc;</div><div class="line">byte data[16] = {{0}};</div><div class="line"><span class="keywordtype">void</span> setup(){</div><div class="line">    nfc.<a class="code" href="class_n_f_c_class.html#adc87fc5d9d4309a056a441e0a18478cd">begin</a>();</div><div class="line">}</div><div class="line"><span class="keywordtype">void</span> loop(){</div><div class="line">    <span class="keywordflow">if</span>(nfc.<a class="code" href="class_n_f_c_class.html#a4fb924c50df698857a4e5d73f6128676">ReadBlock</a>(4,data)){</div><div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i) {</div><div class="line">            Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div><div class="line">            Serial.print(<span class="stringliteral">&quot;0x&quot;</span>);</div><div class="line">            <span class="keywordflow">if</span> (data[0][i] &lt; 0x10) {</div><div class="line">                Serial.print(<span class="stringliteral">&quot;0&quot;</span>);</div><div class="line">            }</div><div class="line">        Serial.print(data[0][i], HEX);</div><div class="line">        }</div><div class="line">        Serial.println();</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 13 2016 14:40:49 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 13 2016 13:30:12 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

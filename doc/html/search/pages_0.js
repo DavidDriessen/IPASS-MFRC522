@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainpage',['Mainpage',['../index.html',1,'']]]
+  ['arduino_20implementation',['Arduino implementation',['../Arduino.html',1,'']]]
 ];
