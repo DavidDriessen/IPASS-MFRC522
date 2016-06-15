@@ -25,6 +25,13 @@ class SPIsetupClass {
     hwlib::spi_bus_bit_banged_sclk_mosi_miso SPI;
 public:
 
+    /**
+     * Setup the default SPI protocol.
+     *
+     * Default:
+     * chipSelect0 = pin 10.
+     * chipSelect1 = pin 50.
+     */
     SPIsetupClass() :
             chipSelect0(hwlib::target::pins::cs0),
             chipSelect1(hwlib::target::pins::cs1),
@@ -38,6 +45,11 @@ public:
         hwlib::wait_ms(5);
     }
 
+    /**
+     * Setup the SPI protocol with use defined pins.
+     *
+     * /param sckPin hwlib pin.
+     */
     SPIsetupClass(hwlib::target::pins sckPin, hwlib::target::pins mosiPin, hwlib::target::pins misoPin, hwlib::target::pins cs0 = hwlib::target::pins::cs0, hwlib::target::pins cs1 = hwlib::target::pins::cs1) :
             chipSelect0(cs0),
             chipSelect1(cs1),
@@ -74,10 +86,9 @@ public:
 #endif //HWLIB_H
 
 #ifdef _SPI_H_INCLUDED
+
 /**
-* Controller for the SPI protocol in the Arduino library.
-*
-* /author David Driessen
+* Controller to setup the SPI protocol in the Arduino library.
 */
 class SPIsetupClass {
     uint32_t chipSelect0 = 10;
@@ -85,7 +96,12 @@ class SPIsetupClass {
     int reset = 9;
 
 public:
-
+    /**
+     * Start the setup for the SPI protocol.
+     *
+     * /param chipSelect0 Pin for the chipselect of the device. Default = 10
+     * /param chipSelect1 Pin for the chipselect of the device. Default = 50
+     */
     void begin(uint32_t chipSelect0 = 10, uint32_t chipSelect1 = 50) {
         this->chipSelect0 = chipSelect0;
         this->chipSelect1 = chipSelect1;
@@ -130,5 +146,6 @@ public:
         digitalWrite(reset, bit);
     }
 };
+
 #endif //_SPI_H_INCLUDED
 #endif //IPASS_SPISETUP_H

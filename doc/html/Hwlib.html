@@ -81,14 +81,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="HwlibSetup"></a>
 setup                           </h1>
-<p>Too use the library you need to including the <a class="el" href="index.html#MFRC522">MFRC522.hpp</a> file or for eaze include <a class="el" href="class_n_f_c_class.html">NFCClass.hpp</a>.</p>
+<p>Too use the library you need to including the <a class="el" href="class_m_f_r_c522.html">MFRC522.hpp</a> file or for eaze include <a class="el" href="class_n_f_c_class.html">NFCClass.hpp</a>.</p>
+<p>Objects to make: <a class="el" href="_s_p_isetup_8hpp_source.html">SPIsetupClass</a>, <a class="el" href="class_m_f_r_c522.html">MFRC522</a> and to make it your life simple <a class="el" href="class_n_f_c_class.html">NFCClass</a>.</p>
 <p>Too begin communicating with the chip, you need to call the “begin(int chipselect)” function.</p>
 <h2><a class="anchor" id="HwlibExample"></a>
 example</h2>
 <div class="fragment"><div class="line"><a class="code" href="class_n_f_c_class.html">NFCClass</a> *nfc;</div><div class="line">byte data[16] = {0};</div><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div><div class="line">    <span class="comment">// kill the watchdog</span></div><div class="line">    WDT-&gt;WDT_MR = WDT_MR_WDDIS;</div><div class="line"></div><div class="line">    SPIsetupClass Default;</div><div class="line">    <a class="code" href="class_m_f_r_c522.html">MFRC522</a> mfrc522(Default);</div><div class="line">    <a class="code" href="class_n_f_c_class.html">NFCClass</a> nfcInit(mfrc522);</div><div class="line">    nfc = &amp;nfcInit;</div><div class="line"></div><div class="line">    nfc-&gt;<a class="code" href="class_n_f_c_class.html#adc87fc5d9d4309a056a441e0a18478cd">begin</a>();</div><div class="line">    nfc-&gt;<a class="code" href="class_n_f_c_class.html#adef134bed8468f11ea0f0b59a01e5abf">printFirmwareVersion</a>();</div><div class="line"></div><div class="line">    <span class="keywordflow">while</span> (1) {</div><div class="line">        <span class="keywordflow">if</span>(nfc.<a class="code" href="class_n_f_c_class.html#a4fb924c50df698857a4e5d73f6128676">ReadBlock</a>(4,data)){</div><div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i) {</div><div class="line">                hwlib::cout &lt;&lt; <span class="stringliteral">&quot; 0x&quot;</span>;</div><div class="line">                <span class="keywordflow">if</span> (data[0][i] &lt; 0x10) {</div><div class="line">                    hwlib::cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div><div class="line">                }</div><div class="line">            hwlib::cout &lt;&lt; hwlib::hex &lt;&lt; (int)data[0][i];</div><div class="line">            }</div><div class="line">            hwlib::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 13 2016 14:40:49 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 15 2016 13:40:25 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

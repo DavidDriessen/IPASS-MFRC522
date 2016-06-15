@@ -47,17 +47,34 @@ void NFCConsole(ArduinoConsole *pConsole) {
             }
             Serial.println();
         }
-        if(result == nfc.AUTH){
+        if (result == nfc.AUTH) {
             Serial.println(" auth");
         }
-        if(result == nfc.READ){
+        if (result == nfc.READ) {
             Serial.println(" read");
         }
-        if(result == nfc.DEAUTH){
+        if (result == nfc.DEAUTH) {
             Serial.println(" deauth");
         }
         return;
     }
+
+    if (pConsole->checkParameters((char *) "readblockasstring", 1)) {
+        if (nfc.ReadBlock(pConsole->getParameterAsInt(2), data[0]) == nfc.OK) {
+            Serial.println((char *) data[0]);
+        }
+        if (result == nfc.AUTH) {
+            Serial.println(" auth");
+        }
+        if (result == nfc.READ) {
+            Serial.println(" read");
+        }
+        if (result == nfc.DEAUTH) {
+            Serial.println(" deauth");
+        }
+        return;
+    }
+
     if (pConsole->checkParameters((char *) "readsector", 1)) {
         NFCClass::Status result = nfc.ReadSector(pConsole->getParameterAsInt(2), (byte **) data);
         if (result == nfc.OK) {
@@ -74,13 +91,13 @@ void NFCConsole(ArduinoConsole *pConsole) {
             }
             Serial.println();
         }
-        if(result == nfc.AUTH){
+        if (result == nfc.AUTH) {
             Serial.println(" auth");
         }
-        if(result == nfc.READ){
+        if (result == nfc.READ) {
             Serial.println(" read");
         }
-        if(result == nfc.DEAUTH){
+        if (result == nfc.DEAUTH) {
             Serial.println(" deauth");
         }
         return;
@@ -101,13 +118,32 @@ void NFCConsole(ArduinoConsole *pConsole) {
             }
             Serial.println();
         }
-        if(result == nfc.AUTH){
+        if (result == nfc.AUTH) {
             Serial.println(" auth");
         }
-        if(result == nfc.WRITE){
+        if (result == nfc.WRITE) {
             Serial.println(" write");
         }
-        if(result == nfc.DEAUTH){
+        if (result == nfc.DEAUTH) {
+            Serial.println(" deauth");
+        }
+        return;
+    }
+
+    if (pConsole->checkParameters((char *) "writeblockasstring", 1)) {
+        int count = 16;
+        Serial.println("Data to Write:");
+        pConsole->Read((char *) data[0], count);
+        if (nfc.WriteBlock(pConsole->getParameterAsInt(2), data[0]) == nfc.OK) {
+            Serial.println((char *) data[0]);
+        }
+        if (result == nfc.AUTH) {
+            Serial.println(" auth");
+        }
+        if (result == nfc.WRITE) {
+            Serial.println(" write");
+        }
+        if (result == nfc.DEAUTH) {
             Serial.println(" deauth");
         }
         return;
@@ -130,7 +166,7 @@ void setup() {
     nfc.printFirmwareVersion();
     console.addCommand("nfc", NFCConsole);
     lock.attach(11);
-    lock.write(5);
+    lock.write(20);
     Serial.println("Present card");
 }
 
@@ -147,9 +183,9 @@ void loop() {
 
         if (access) {
             Serial.println("access");
-            lock.write(175);
+            lock.write(170);
             delay(1000);
-            lock.write(5);
+            lock.write(10);
         } else {
             caccess = true;
             for (int i = 0; i < 16; ++i) {
@@ -161,7 +197,7 @@ void loop() {
             if (!caccess) {
                 Serial.println("No access");
             } else {
-                while (Serial.read() != -1){}
+                while (Serial.read() != -1) { }
                 console.enter = false;
                 Serial.print("Arduino:\t");
             }

@@ -32,6 +32,10 @@ SPIsetupClass SPIsetup;
 #endif
 #endif
 
+/**
+ * Implementation for the MFRC522 chip to communicate with an MIFARE RFID card.
+ *
+ */
 class MFRC522 : public nfcController {
     // List off register addresses
     const static byte CommandReg = 0x01;
@@ -120,7 +124,7 @@ class MFRC522 : public nfcController {
     byte ReadReg(byte reg) {
         byte read[2] = {0};
         byte write[2] = {0};
-        write[0] = (byte)(0x80 | ((reg << 1) & 0x7E));
+        write[0] = (byte) (0x80 | ((reg << 1) & 0x7E));
         write[1] = 0x00;
         SPIsetup.write_and_read(chipSelect, 2, write, read);
         return read[1];
@@ -131,7 +135,7 @@ class MFRC522 : public nfcController {
         byte out[30] = {0};
         byte in[30] = {0};
         for (int i = 0; i < count - 1; i++) {
-            out[i] = (byte)(0x80 | ((reg << 1) & 0x7E));
+            out[i] = (byte) (0x80 | ((reg << 1) & 0x7E));
         }
         out[count] = 0x00;
         SPIsetup.write_and_read(chipSelect, count, out, in);
@@ -143,7 +147,7 @@ class MFRC522 : public nfcController {
     void WriteReg(byte reg, byte value) {
         byte read[2] = {0};
         byte write[2] = {0};
-        write[0] = (byte)((reg << 1) & 0x7E);
+        write[0] = (byte) ((reg << 1) & 0x7E);
         write[1] = value;
         SPIsetup.write_and_read(chipSelect, 2, write, read);
     }
@@ -154,7 +158,7 @@ class MFRC522 : public nfcController {
         for (int i = 1; i < count; i++) {
             out[i] = values[i - 1];
         }
-        out[0] = (byte)((reg << 1) & 0x7E);
+        out[0] = (byte) ((reg << 1) & 0x7E);
         SPIsetup.write_and_read(chipSelect, count, out, nullptr);
     }
 
@@ -184,7 +188,7 @@ class MFRC522 : public nfcController {
                      bool checkCRC = false) {
         byte waitIRq = 0, n, _validBits = 0;
 
-        byte bitFraming = (byte)(validBits ? *validBits : 0);
+        byte bitFraming = (byte) (validBits ? *validBits : 0);
 
         if (command == CMD_Transceive) {
             waitIRq = 0x30;
@@ -227,7 +231,7 @@ class MFRC522 : public nfcController {
             }
             *backLen = n;
             ReadReg(FIFODataReg, n, backData);
-            _validBits = (byte)(ReadReg(ControlReg) & 0x07);
+            _validBits = (byte) (ReadReg(ControlReg) & 0x07);
             if (validBits) {
                 *validBits = _validBits;
             }
@@ -239,7 +243,7 @@ class MFRC522 : public nfcController {
 
         if (backData && backLen && checkCRC) {
             byte controlBuffer[2];
-            if (!calculate_crc(&backData[0], (byte)(*backLen - 2), &controlBuffer[0])) {
+            if (!calculate_crc(&backData[0], (byte) (*backLen - 2), &controlBuffer[0])) {
                 return 0;
             }
             if ((backData[*backLen - 2] != controlBuffer[0]) || (backData[*backLen - 1] != controlBuffer[1])) {
@@ -277,14 +281,26 @@ class MFRC522 : public nfcController {
     SPIsetupClass& SPIsetup;
 
 public:
-    MFRC522(SPIsetupClass& SPI)
+    /**
+     * Setup the chip with chipselect number.
+     *
+     * /param SPI The SPIsetupClass object to use.
+     * /param chipSelect The chipselect number where the chip is commected to0 Default = 0.
+     */
+    MFRC522(SPIsetupClass& SPI, int chipSelect = 0)
         : SPIsetup(SPI)
     {
+        this->chipSelect = chipSelect;
     }
 #else
 public:
 #endif
 
+    /**
+     * Setup the chip with chipselect number.
+     *
+     * /param chipSelect The chipselect number where the chip is commected to0 Default = 0.
+     */
     void begin(int chipSelect = 0) {
 #ifdef _SPI_H_INCLUDED
         SPIsetup.begin();
@@ -312,6 +328,10 @@ public:
         }
     }
 
+    /**
+     * Detect if there is an card to communicate with.
+     *
+     */
     bool DetectCard() {
         byte buffer[2];
         byte len = sizeof(buffer);
@@ -328,6 +348,11 @@ public:
         return 1;
     }
 
+    /**
+     * Get the id of the card that is detected.
+     *
+     * /param uid An array of bytes of the cards ID.
+     */
     bool GetCardId(byte *uid) {
         byte buffer[9];
         byte backLen = 9;
@@ -347,6 +372,11 @@ public:
         return 1;
     }
 
+    /**
+     * Select the card to communicate with.
+     *
+     * /param uid An array of bytes of the cards ID to select.
+     */
     bool SelectCard(byte *uid) {
         byte index = 2;
         byte buffer[9];
@@ -386,6 +416,14 @@ public:
         return 1;
     }
 
+    /**
+     * Authenticate your self to get access to the data.
+     *
+     * /param authType The type to authenticate your self with. Types are 0x60 and 0x61.
+     * /param blockAddr The block address to authenticate.
+     * /param key The 6 byte array to authenticate your self with.
+     * /param uid An array of bytes of the cards ID to authenticate.
+     */
     bool Authenticate(byte authType, byte blockAddr, byte *key, byte *uid) {
         byte sendData[12];
         sendData[0] = authType;
@@ -399,6 +437,9 @@ public:
         return Communicate(CMD_MFAuthent, &sendData[0], sizeof(sendData));
     }
 
+    /**
+     * Locks the card again.
+     */
     bool Deauthenticate() {
         byte buffer[4] = {APDU_HLTA, 0x00};
         if (!calculate_crc(buffer, 2, &buffer[2])) {
@@ -430,6 +471,13 @@ public:
         return 0;
     }
 
+    /**
+     * Reads the block of the selected card.
+     *
+     * /param block_address The block address that you want to read.
+     * /param data An 16 byte array to put the data in from the card.
+     * /param dataLen The size of the data array.
+     */
     bool ReadBlock(byte block_address, byte *data, byte &dataLen) {
         if (data == nullptr || dataLen > 16) {
             return 0;
@@ -450,6 +498,13 @@ public:
         return 0;
     }
 
+    /**
+     * Reads the block of the selected card.
+     *
+     * /param block_address The block address that you want to write.
+     * /param data An 16 byte array to write to the card.
+     * /param dataLen The size of the data array.
+     */
     bool WriteBlock(byte blockAddr, byte *dataToWrite, byte dataLen) {
         if (dataToWrite == nullptr || dataLen != 16) {
             return 0;
@@ -495,6 +550,9 @@ public:
         return 1;
     }
 
+    /**
+     * Get the version of the firmware of the chip.
+     */
     byte getFirmwareVersion() {
 
         byte v = ReadReg(VersionReg);

@@ -1,6 +1,6 @@
 ﻿Mainpage                        {#mainpage}
 ============
-MFRC522							{#MFRC522}
+MFRC522							{#MFRC522Main}
 ============
 
 Mfrc522 is an Arduino library for the RFID-RC522 NFC chip.

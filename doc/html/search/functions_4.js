@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printfirmwareversion',['printFirmwareVersion',['../class_n_f_c_class.html#adef134bed8468f11ea0f0b59a01e5abf',1,'NFCClass']]]
+  ['nfcclass',['NFCClass',['../class_n_f_c_class.html#a9e1874fc0786f8a4093ec87acbc95a7f',1,'NFCClass']]]
 ];

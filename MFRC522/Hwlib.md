@@ -5,6 +5,7 @@ setup							{#HwlibSetup}
 ============
 Too use the library you need to including the [MFRC522.hpp](@ref MFRC522) file or for eaze include [NFCClass.hpp](@ref NFCClass).
 
+Objects to make: [SPIsetupClass](@ref SPIsetup.hpp), MFRC522 and to make it your life simple NFCClass.
 
 Too begin communicating with the chip, you need to call the “begin(int chipselect)” function.
 

@@ -90,6 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MFRC522 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_m_f_r_c522_8hpp_source.html">MFRC522.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MFRC522:</div>
 <div class="dyncontent">
@@ -102,41 +104,335 @@ Inheritance diagram for MFRC522:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37150fa9b21cdb3803df7c05d1682490"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37150fa9b21cdb3803df7c05d1682490"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (int chipSelect=0)</td></tr>
+<tr class="memitem:a37150fa9b21cdb3803df7c05d1682490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a37150fa9b21cdb3803df7c05d1682490">begin</a> (int chipSelect=0)</td></tr>
 <tr class="separator:a37150fa9b21cdb3803df7c05d1682490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a57f97690fba61c8684cddb5645a2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32a57f97690fba61c8684cddb5645a2a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>DetectCard</b> ()</td></tr>
+<tr class="memitem:a32a57f97690fba61c8684cddb5645a2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a32a57f97690fba61c8684cddb5645a2a">DetectCard</a> ()</td></tr>
 <tr class="separator:a32a57f97690fba61c8684cddb5645a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ca793fc5bec071faeb20c62cdaa56db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ca793fc5bec071faeb20c62cdaa56db"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetCardId</b> (byte *uid)</td></tr>
+<tr class="memitem:a7ca793fc5bec071faeb20c62cdaa56db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a7ca793fc5bec071faeb20c62cdaa56db">GetCardId</a> (byte *uid)</td></tr>
 <tr class="separator:a7ca793fc5bec071faeb20c62cdaa56db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b290cb869c25d5e3a03d6f73d9560ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b290cb869c25d5e3a03d6f73d9560ce"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>SelectCard</b> (byte *uid)</td></tr>
+<tr class="memitem:a5b290cb869c25d5e3a03d6f73d9560ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a5b290cb869c25d5e3a03d6f73d9560ce">SelectCard</a> (byte *uid)</td></tr>
 <tr class="separator:a5b290cb869c25d5e3a03d6f73d9560ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a939b76c2e4ed96982afd866545726278"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a939b76c2e4ed96982afd866545726278"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Authenticate</b> (byte authType, byte blockAddr, byte *key, byte *uid)</td></tr>
+<tr class="memitem:a939b76c2e4ed96982afd866545726278"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a939b76c2e4ed96982afd866545726278">Authenticate</a> (byte authType, byte blockAddr, byte *key, byte *uid)</td></tr>
 <tr class="separator:a939b76c2e4ed96982afd866545726278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9edad61c4c433f15dd290a28515a8fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9edad61c4c433f15dd290a28515a8fd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Deauthenticate</b> ()</td></tr>
+<tr class="memitem:ac9edad61c4c433f15dd290a28515a8fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#ac9edad61c4c433f15dd290a28515a8fd">Deauthenticate</a> ()</td></tr>
 <tr class="separator:ac9edad61c4c433f15dd290a28515a8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f9f77efe22457d3abbd508e7c7401c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f9f77efe22457d3abbd508e7c7401c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadBlock</b> (byte block_address, byte *data, byte &amp;dataLen)</td></tr>
+<tr class="memitem:a8f9f77efe22457d3abbd508e7c7401c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a8f9f77efe22457d3abbd508e7c7401c1">ReadBlock</a> (byte block_address, byte *data, byte &amp;dataLen)</td></tr>
 <tr class="separator:a8f9f77efe22457d3abbd508e7c7401c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3470557e2453474420d7185b1b540008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3470557e2453474420d7185b1b540008"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteBlock</b> (byte blockAddr, byte *dataToWrite, byte dataLen)</td></tr>
+<tr class="memitem:a3470557e2453474420d7185b1b540008"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a3470557e2453474420d7185b1b540008">WriteBlock</a> (byte blockAddr, byte *dataToWrite, byte dataLen)</td></tr>
 <tr class="separator:a3470557e2453474420d7185b1b540008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e84773f67007a8639a076e4984187c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e84773f67007a8639a076e4984187c9"></a>
-byte&#160;</td><td class="memItemRight" valign="bottom"><b>getFirmwareVersion</b> ()</td></tr>
+<tr class="memitem:a2e84773f67007a8639a076e4984187c9"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_r_c522.html#a2e84773f67007a8639a076e4984187c9">getFirmwareVersion</a> ()</td></tr>
 <tr class="separator:a2e84773f67007a8639a076e4984187c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation for the <a class="el" href="class_m_f_r_c522.html">MFRC522</a> chip to communicate with an MIFARE RFID card. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a939b76c2e4ed96982afd866545726278"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::Authenticate </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>authType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>blockAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>uid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Authenticate your self to get access to the data.</p>
+<p>/param authType The type to authenticate your self with. Types are 0x60 and 0x61. /param blockAddr The block address to authenticate. /param key The 6 byte array to authenticate your self with. /param uid An array of bytes of the cards ID to authenticate. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37150fa9b21cdb3803df7c05d1682490"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MFRC522::begin </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chipSelect</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setup the chip with chipselect number.</p>
+<p>/param chipSelect The chipselect number where the chip is commected to0 Default = 0. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9edad61c4c433f15dd290a28515a8fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::Deauthenticate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Locks the card again. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32a57f97690fba61c8684cddb5645a2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::DetectCard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Detect if there is an card to communicate with. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ca793fc5bec071faeb20c62cdaa56db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::GetCardId </td>
+          <td>(</td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>uid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the id of the card that is detected.</p>
+<p>/param uid An array of bytes of the cards ID. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e84773f67007a8639a076e4984187c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte MFRC522::getFirmwareVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the version of the firmware of the chip. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f9f77efe22457d3abbd508e7c7401c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::ReadBlock </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>block_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte &amp;&#160;</td>
+          <td class="paramname"><em>dataLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads the block of the selected card.</p>
+<p>/param block_address The block address that you want to read. /param data An 16 byte array to put the data in from the card. /param dataLen The size of the data array. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b290cb869c25d5e3a03d6f73d9560ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::SelectCard </td>
+          <td>(</td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>uid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Select the card to communicate with.</p>
+<p>/param uid An array of bytes of the cards ID to select. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3470557e2453474420d7185b1b540008"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFRC522::WriteBlock </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>blockAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>dataToWrite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>dataLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads the block of the selected card.</p>
+<p>/param block_address The block address that you want to write. /param data An 16 byte array to write to the card. /param dataLen The size of the data array. </p>
+
+<p>Implements <a class="el" href="classnfc_controller.html">nfcController</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_m_f_r_c522_8hpp_source.html">MFRC522.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 13 2016 14:40:49 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 15 2016 13:40:25 for MFRC522 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
